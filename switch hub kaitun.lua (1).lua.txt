@@ -805,10 +805,7 @@ if _G.Switch_Hub_Series_R then
 		end)
 
 		]]
-	else
-		_G.library = loadstring(game:HttpGet("https://raw.githubusercontent.com/soulju2097/Gui/main/README.md"))()
-		library = _G.library
-	end
+end
 	
 	local PepsisWorld = library:CreateWindow({
 		Name = "Switch Hub [ Kaitun ]",
