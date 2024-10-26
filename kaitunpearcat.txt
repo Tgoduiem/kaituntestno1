@@ -1127,7 +1127,7 @@ fruitMap[#fruitMap+1]="Bird-Bird: Phonex"
             game.ReplicatedStorage.Effect.Container.Hit:Destroy()
          end
          ) 
-         while wait() and game.Players.LocalPlayer.Team == nil do
+          while wait() and game.Players.LocalPlayer.Team == nil do
             if game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseTeam") then
                repeat
                   wait()
@@ -1135,7 +1135,7 @@ fruitMap[#fruitMap+1]="Bird-Bird: Phonex"
 
                      for i, v in pairs(
                      getconnections(
-                     game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Activated
+                     game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.TextButton.Activated
                      )
                      ) do
                         v.Function()
@@ -1145,7 +1145,6 @@ fruitMap[#fruitMap+1]="Bird-Bird: Phonex"
                until game.Players.LocalPlayer.Team ~= nil
             end
          end
-
 
          --<---------- func ---------->--
 
