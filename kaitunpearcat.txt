@@ -141,6 +141,14 @@ function EquipWeapon(ToolSe)
 	 end
 -- Time
 -- Pos
+function(vu)
+		Teleport_Tween = vu
+		if not vu then
+			if Tween ~= nil then
+				Tween:Cancel()
+			end
+		end
+	end
 function TP(Pos)
 		local xps = game.Players.LocalPlayer and game.Players.LocalPlayer.Character.HumanoidRootPart and  game.Players.LocalPlayer.Character.HumanoidRootPart.Position
 		if xps then
