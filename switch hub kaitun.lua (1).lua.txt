@@ -805,6 +805,35 @@ if _G.Switch_Hub_Series_R then
 		end)
 
 		]]
+	else
+		_G.library = loadstring(game:HttpGet("https://raw.githubusercontent.com/soulju2097/Gui/main/README.md"))()
+		library = _G.library
+	end
+	
+	local PepsisWorld = library:CreateWindow({
+		Name = "Switch Hub [ Kaitun ]",
+		Themeable = {	
+		}
+	})
+	local General_T = PepsisWorld:CreateTab({
+		Name = "General"
+	})
+	local Start_S = General_T:CreateSection({
+		Name = " Farming ",
+		Side = 'Right'
+	})
+	local Time_S = General_T:CreateSection({
+		Name = " Time ",
+		Side = 'Left'
+	})
+	
+	local Set_Time = Time_S:AddLabel({
+		Name = ' Title : '
+	})
+	local Time_Server_S = Time_S:AddLabel({
+		Name = " Time Server ",
+		Side = 'Left'
+	})
 	spawn(function()
 		while wait(1) do
 			pcall(function()
@@ -818,6 +847,245 @@ if _G.Switch_Hub_Series_R then
 			end) 
 		end
 	end)
+		
+		local Status_S = General_T:CreateSection({
+		Name = " Status "
+		})
+		Status_S:AddLabel({
+			Name = ' Name : '..game.Players.LocalPlayer.Name
+			})
+
+		if Old_World then
+		World_N = 1
+		elseif New_World then
+		World_N = 2
+		elseif Three_World then
+		World_N = 3
+		end
+		Status_S:AddLabel({
+			Name = ' World : '..World_N
+		})
+		local Race_S = Status_S:AddLabel({
+			Name = ' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)
+		})
+		local Fruit_S = Status_S:AddLabel({
+		Name = ' Fruit : '
+		})
+		local Awaken_S = Status_S:AddLabel({
+		Name = ' Awaken : '
+		})
+		
+		Start_S:AddToggle({
+		Name = 'Auto Farm',
+		Enabled = _G.Switch_Hub_Series_R,
+		Callback = function(vu)
+			Auto_Farm_Kaitun = vu
+		end
+		})
+		if _G.Switch_Hub_Series_R then
+			Auto_Farm_Kaitun = true
+		end
+		local Status_Run = Start_S:AddLabel({
+			Name = ' Status : Farm Level'
+		})
+		
+		local Full_Moon_S = Start_S:AddLabel({
+			Name = ' 🌕 Full Moon : None.'
+			})
+		local Mirage_S = Start_S:AddLabel({
+			Name = ' 🌴 Mirage Island : None.'
+		})
+		spawn(function()
+			while wait(1) do
+				pcall(function()
+					if Three_World then
+						if game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149431" then
+							Full_Moon_S:Set(tostring(" 🌕 Full Moon : 100%"))
+						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149052" then
+							Full_Moon_S:Set(tostring(" 🌕 Full Moon : 75%"))
+						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709143733" then
+							Full_Moon_S:Set(tostring(" 🌕 Full Moon : 50%"))
+						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709150401" then
+							Full_Moon_S:Set(tostring(" 🌕 Full Moon : 25%"))
+						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149680" then
+							Full_Moon_S:Set(tostring(" 🌕 Full Moon : 15%"))
+						else 
+							Full_Moon_S:Set(tostring(" 🌕 Full Moon : 0"))
+						end
+						if _G.Event['Pull Lever'] and game:GetService("Workspace").Map:FindFirstChild("MysticIsland") and Evo_Race_V3_H and not Pull_Lever_H and Quest_Dough_Awaken and Valkyrie_Helmet_H then
+							Mirage_S:Set(" 🌴 Mirage Island : ✅ Spawn ") 
+							local result = {}
+                            local x = tostring(game:GetService("Lighting").TimeOfDay)
+                            local regex = ("([^%s]+)"):format(":")
+                            for each in x:gmatch(regex) do
+								table.insert(result, each)
+							end
+							if tonumber(result[1]) >= 0 and tonumber(result[1]) < 5 or tonumber(result[1]) >= 18 and tonumber(result[1]) <= 23 then
+								List.Pull_Lerver = true
+							end
+						else
+							Mirage_S:Set(' 🌴 Mirage Island : None.')
+						end
+						wait(10)
+					else
+						wait(10)
+					end
+				end)
+			end
+		end)
+	--
+	local Quest_S = General_T:CreateSection({
+	Name = " Quest ",
+	Side = 'Left'
+	})
+	local Bartlio_S = Quest_S:AddLabel({
+	Name = ' ❌ : Quest Bartlio'
+	})
+	local Don_Swan_S = Quest_S:AddLabel({
+	Name = ' ❌ : Quest Don Swan'
+	})
+	local Death_Step_S_Q = Quest_S:AddLabel({
+	Name = ' ❌ : Quest Death Step'
+	})
+	local Sharkman_Karate_S_Q = Quest_S:AddLabel({
+	Name = ' ❌ : Quest Sharkman Karate'
+	})
+	local Dragon_Talon_S_Q = Quest_S:AddLabel({
+		Name = ' ❌ : Quest Dragon Talon'
+	})
+	local Race_V4_S_Q = Quest_S:AddLabel({
+		Name = ' ❌ : Quest Pull Lever'
+	})
+	
+	--[[
+	local Time_Check = library.Notify({
+		Text = ' 👊 Godhuman 👊 ,,,,,,, 🍎 Full Awaken 🍎 , 🎸 Soul Guitar 🎸 , ⚔️ CDK ⚔️ , ☠️ Hallow Scythe ☠️ , 🗡️ TTK 🗡️',
+		Paused = true
+	})
+	]]
+	
+	-- Time_Check:SetText(' 👊 Godhuman 👊 , 🍩 Dough Awaken 🍩 , 🍎 Full Awaken 🍎 , 🎸 Soul Guitar 🎸 , 🎓 Dark Coat 🎓 , ⚔️ Cursed Dual Katana ⚔️ , 🗡️ True Triple Katana 🗡️ , ☠️ Hallow Scythe ☠️')
+	--
+	local Melee_S = General_T:CreateSection({
+	Name = " Melee ",
+	Side = 'Left'
+	})
+	local Superhuman_S = Melee_S:AddLabel({
+	Name = ' ❌ : Superhuman'
+	})
+	local Death_Step_S = Melee_S:AddLabel({
+	Name = ' ❌ : Death Step'
+	})
+	local Sharkman_Karate_S = Melee_S:AddLabel({
+	Name = ' ❌ : Sharkman Karate'
+	})
+	local Electric_Claw_S = Melee_S:AddLabel({
+	Name = ' ❌ : Electric Claw'
+	})
+	local Dragon_Talon_S = Melee_S:AddLabel({
+	Name = ' ❌ : Dragon Talon'
+	})
+	local God_Human_S = Melee_S:AddLabel({
+	Name = ' ❌ : Godhuman'
+	})
+	
+	--
+	local Information_S = General_T:CreateSection({
+	Name = " Information "
+	})
+	local Bone_S = Information_S:AddLabel({
+	Name = ' Bone : '
+	})
+	local Ectoplasm_S = Information_S:AddLabel({
+	Name = ' Ectoplasm : '
+	})
+	local Elite_Hunter_S = Information_S:AddLabel({
+	Name = ' Elite Hunter : '
+	})
+	local Cake_Prince_S = Information_S:AddLabel({
+	Name = ' Cake Prince : '
+	})
+	--
+	local Check_S = General_T:CreateSection({
+	Name = " Check ",
+	Side = 'Left'
+	})
+	local RGB_S_Q = Check_S:AddLabel({
+		Name = ' RGB : '
+	})
+	local God_Human_C_S = Check_S:AddLabel({
+	Name = ' Godhuman : '
+	})
+	local Soul_Guitar_C_S = Check_S:AddLabel({
+	Name = ' Soul Guitar : '
+	})
+	local Dough_Awaken_C_S = Check_S:AddLabel({
+	Name = ' Dough Aawaken : '
+	})
+	local Cursed_Dual_Katana_Q_S = Check_S:AddLabel({
+	Name = ' Cursed Dual Katana : '
+	})
+	local True_Triple_Katana_S_Q = Check_S:AddLabel({
+		Name = ' True Triple Katana : '
+	})
+	local Snow_White_S = Check_S:AddLabel({
+		Name = ' ⚪ Haki Snow White : '
+	})
+	-- Snow_White_S:Set(' Haki Snow White : ✅')
+	local Pure_Red_S = Check_S:AddLabel({
+		Name = ' 🔴 Haki Pure Red : '
+	})
+	-- Pure_Red_S:Set(' Haki Pure Red : ✅')
+	local Winter_Sky_S = Check_S:AddLabel({
+		Name = ' ⭕ Haki Winter Sky : '
+	})
+	--
+	local Tool_Special_S = General_T:CreateSection({
+		Name = " Tool Special ",
+		Side = 'Left'
+	})
+	--
+	local World_S = General_T:CreateSection({
+		Name = " Teleport World ",
+		Side = 'Left'
+	})
+	World_S:AddButton({
+		Name = ' Teleport Third World ',
+		Callback = function(vu)
+			game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
+			TleP = true
+		end
+	})
+	World_S:AddButton({
+		Name = ' Teleport Second World ',
+		Callback = function(vu)
+			game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")
+			TleP = true
+		end
+	})
+	World_S:AddButton({
+		Name = ' Teleport Old World ',
+		Callback = function(vu)
+			game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelMain")
+			TleP = true
+		end
+	})
+	--[[
+	local Capcut_S = General_T:CreateSection({
+		Name = " Capcut ",
+		Side = 'Left'
+	})
+	Capcut_S:AddToggle({
+		Name = ' Auto Save ',
+		Callback = function(vu)
+			
+		end
+	})
+	Capcut_S:AddButton({
+		Name = ' Start Capcut ',
+		Callback = function()
+			
+		end
 	})
 	]]
 	--
@@ -952,6 +1220,139 @@ if _G.Switch_Hub_Series_R then
 			end
 		end)
 	end
+	Tool_Special_S:AddButton({
+		Name = ' Teleport Bypass ',
+		Callback = function()
+			if Select_Island_X == nil then
+			else
+				TPX(game:GetService("Workspace").Map[Select_Island_X].WorldPivot)
+			end
+		end
+		})
+		Tool_Special_S:AddToggle({
+			Name = 'White Screen',
+			KeyBind = Enum.KeyCode.Y,
+			Enabled = _G.Main['White Screen'],
+			Callback = function(vu)
+
+			end
+			})
+	--
+	local Sword_S = General_T:CreateSection({
+	Name = " Sword ",
+	Side = 'Right'
+	})
+    
+    --
+	local Saber_S = Sword_S:AddLabel({
+	Name = ' ❌ : Saber'
+	})
+	local Bisento_S = Sword_S:AddLabel({
+	Name = ' ❌ : Bisento'
+	})
+	local Soul_Cane_S = Sword_S:AddLabel({
+	Name = ' ❌ : Soul Cane'
+	})
+	local Rengoku_S = Sword_S:AddLabel({
+	Name = ' ❌ : Rengoku'
+	})
+	local Yama_S = Sword_S:AddLabel({
+	Name = ' ❌ : Yama'
+	})
+	local Koko_S = Sword_S:AddLabel({
+	Name = ' ❌ : Koko'
+	})
+	local Spikey_Trident_S = Sword_S:AddLabel({
+	Name = ' ❌ : Spikey Trident'
+	})
+	local Buddy_Sword_S = Sword_S:AddLabel({
+	Name = ' ❌ : Buddy Sword'
+	})
+	local Canvander_S = Sword_S:AddLabel({
+	Name = ' ❌ : Canvander'
+	})
+	local Tushita_S = Sword_S:AddLabel({
+	Name = ' ❌ : Tushita'
+	})
+	local Hallow_Scythe_S = Sword_S:AddLabel({
+	Name = ' ❌ : Hallow Scythe'
+	})
+	local Midnight_Blade_S = Sword_S:AddLabel({
+	Name = ' ❌ : Midnight Blade'
+	})
+	local Shisui_S = Sword_S:AddLabel({
+	Name = ' ❌ : Shisui'
+	})
+	local Saddi_S = Sword_S:AddLabel({
+	Name = ' ❌ : Saddi'
+	})
+	local Wando_S = Sword_S:AddLabel({
+	Name = ' ❌ : Wando'
+	})
+	local Dark_Dagger_S = Sword_S:AddLabel({
+	Name = ' ❌ : Dark Dagger'
+	})
+	local True_Triple_Katana_S = Sword_S:AddLabel({
+	Name = ' ❌ : True Triple Katana'
+	})
+	local Cursed_Dual_Katana_S = Sword_S:AddLabel({
+	Name = ' ❌ : Cursed Dual Katana'
+	})
+    
+	--
+	local Gun_S = General_T:CreateSection({
+        Name = " Gun ",
+        Side = 'Right'
+        })
+	local Soul_Guitar_S = Gun_S:AddLabel({
+        Name = ' ❌ : Soul Guitar'
+        })
+	local Serpent_Bow_S = Gun_S:AddLabel({
+	Name = ' ❌ : Serpent Bow'
+	})
+	local Kabucha_S = Gun_S:AddLabel({
+	Name = ' ❌ : Kabucha'
+	})
+	local Acidum_Rifle_S = Gun_S:AddLabel({
+	Name = ' ❌ : Acidum Rifle'
+	})
+	--
+	local Accessory_S = General_T:CreateSection({
+	Name = " Accessory ",
+	Side = 'Right'
+	})
+	local Valkyrie_Helmet_S = Accessory_S:AddLabel({
+	Name = ' ❌ : Valkyrie Helm'
+	})
+	local Holy_Crown_S = Accessory_S:AddLabel({
+	Name = ' ❌ : Holy Crown'
+	})
+	local Pale_Scarf_S = Accessory_S:AddLabel({
+	Name = ' ❌ : Pale Scarf'
+	})
+	local Dark_Coat_S = Accessory_S:AddLabel({
+	Name = ' ❌ : Dark Coat'
+	})
+	local Swan_Glass_S = Accessory_S:AddLabel({
+	Name = ' ❌ : Swan Glasses'
+	})
+	local Zebra_Cap_S = Accessory_S:AddLabel({
+	Name = ' ❌ : Zebra Cap'
+	})
+	local Warrior_Helmet_S = Accessory_S:AddLabel({
+	Name = ' ❌ : Warrior Helmet'
+	})
+    -- 
+    local Mys_Item_P = General_T:CreateSection({
+        Name = " Mysterious Item ",
+        Side = 'Right'
+    })
+    local Mirror_Fractal_S = Mys_Item_P:AddLabel({
+        Name = ' ❌ : Mirror Fractal'
+    })
+    local Valkyrie_Helmet_S_L = Mys_Item_P:AddLabel({
+        Name = ' ❌ : Valkyrie Helmet'
+    })
 	-- Check Gui
 	function EquipWeapon(ToolSe)
 		pcall(function()
@@ -976,6 +1377,49 @@ if _G.Switch_Hub_Series_R then
 	function Set_Quest()
         for i,v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventory")) do
             if v.Type == 'Material' then
+                if v.Name == 'Mirror Fractal' then
+					Mirror_Fractal_H = true
+                    Mirror_Fractal_S:Set(' ✅ : Mirror Fractal')
+                end
+            end
+        end
+		if Three_World then
+			Bartlio_S:Set(' ✅ : Quest Bartlio')
+			Don_Swan_S:Set(' ✅ : Quest Don Swan')
+			Death_Step_S_Q:Set(' ✅ : Quest Death Step')
+			Sharkman_Karate_S_Q:Set(' ✅ : Quest Sharkman Karate')
+			Sharkman_Karate_Q_C = true
+		elseif New_World then
+			if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BartiloQuestProgress","Bartilo") == 3 then
+				Bartlio_S:Set(' ✅ : Quest Bartlio')
+				Bartlio_H = true
+			end
+			if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TalkTrevor","1") == 0 then
+				Don_Swan_S:Set(' ✅ : Quest Don Swan')
+				Don_Swan_H = true
+			end
+			if not game:GetService("Workspace").Map.IceCastle.Hall.LibraryDoor:FindFirstChild('Keyhole') then
+				Death_Step_S_Q:Set(' ✅ : Quest Death Step')
+			end
+			if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate",true) ~= nil and game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate",true) ~= "" then
+				if not string.find(tostring(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate",true)),"keys") or game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate",true) == 3 or game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate",true) == 1 or game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate",true) == 0 then
+					Sharkman_Karate_S_Q:Set(' ✅ : Quest Sharkman Karate')
+					Sharkman_Karate_Q_C = true
+				end
+			end
+		end
+		if game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyDragonTalon",true) ~= '' then
+			if not string.find(tostring(game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyDragonTalon",true)),'Set') then
+				Dragon_Talon_S_Q:Set(' ✅ : Quest Dragon Talon')
+				Dragon_Talon_Q = true
+			end
+		end
+		if Three_World and game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CheckTempleDoor") == true then
+			Pull_Lever_H = true
+			Race_V4_S_Q:Set(' ✅ : Quest Pull Lever')
+		end
+	end
+	Set_Quest()
 	local function CheckItem(matname)
 		for i,v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventory")) do
 			if type(v) == "table" then
@@ -1100,6 +1544,9 @@ if _G.Switch_Hub_Series_R then
 			end
 		elseif tostring(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("HornedMan","Bet")) == '1' then
 			RGB_H = true
+			RGB_S_Q:Set(' RGB : ✅')
+			Check_RGB_Spawn = nil
+		end
 	end
 	end
 	Set_Status()
@@ -1112,10 +1559,12 @@ if _G.Switch_Hub_Series_R then
 	end
 	function Set_Melee()
 		if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman") == 1 or game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman") == 2 then
+			Bartlio_S:Set(' ✅ : Quest Bartlio')
 			repeat wait()
 				EquipWeapon('Superhuman')
 			until Check_Mastery_Melee('Superhuman')
 			Superhuman_Buy = true
+			Superhuman_S:Set(' ✅ : Superhuman'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChild('Superhuman').Level.Value))
 			if tonumber(game.Players.LocalPlayer.Character:FindFirstChild('Superhuman').Level.Value) >= 330 then
 				Superhuman_H = true
 			end
@@ -1125,24 +1574,30 @@ if _G.Switch_Hub_Series_R then
 				EquipWeapon('Death Step')
 			until Check_Mastery_Melee('Death Step')
 			Death_Step_Buy = true
+			Death_Step_S_Q:Set(' ✅ : Quest Death Step')
+			Death_Step_S:Set(' ✅ : Death Step'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChild('Death Step').Level.Value))
 			if tonumber(game.Players.LocalPlayer.Character:FindFirstChild('Death Step').Level.Value) >= 400 then
 				Death_Step_H = true
 			end
 		end
 		if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate") == 1 or game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate") == 2 then
+			Sharkman_Karate_S_Q:Set(' ✅ : Quest Sharkman Karate')
 			repeat wait()
 				EquipWeapon('Sharkman Karate')
 			until Check_Mastery_Melee('Sharkman Karate')
 			Sharkman_Karate_Buy = true
+			Sharkman_Karate_S:Set(' ✅ : Sharkman Karate'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChild('Sharkman Karate').Level.Value))
 			if tonumber(game.Players.LocalPlayer.Character:FindFirstChild('Sharkman Karate').Level.Value) >= 300 then
 				Sharkman_Karate_H = true
 			end
 		end
 		if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw") == 1 or game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw") == 2 then
+			Don_Swan_S:Set(' ✅ : Quest Don Swan')
 			repeat wait()
 				EquipWeapon('Electric Claw')
 			until Check_Mastery_Melee('Electric Claw')
 			Electric_Claw_Buy = true
+			Electric_Claw_S:Set(' ✅ : Electric Claw'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChild('Electric Claw').Level.Value))
 			if tonumber(game.Players.LocalPlayer.Character:FindFirstChild('Electric Claw').Level.Value) >= 330 then
 				Electric_Claw_H = true
 			end
@@ -1152,15 +1607,18 @@ if _G.Switch_Hub_Series_R then
 				EquipWeapon('Dragon Talon')
 			until Check_Mastery_Melee('Dragon Talon')
 			Dragon_Talon_Buy = true
+			Dragon_Talon_S:Set(' ✅ : Dragon Talon'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChild('Dragon Talon').Level.Value))
 			if tonumber(game.Players.LocalPlayer.Character:FindFirstChild('Dragon Talon').Level.Value) >= 350 then
 				Dragon_Talon_H = true
 			end
 		end
 		if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman") == 1 or game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman") == 2 then
+			God_Human_C_S:Set(' Godhuman : ✅')
 			repeat wait()
 				EquipWeapon('Godhuman')
 			until Check_Mastery_Melee('Godhuman')
 			God_Human_Buy = true
+			God_Human_S:Set(' ✅ : Godhuman'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChild('Godhuman').Level.Value))
 		end
 	end
 	Set_Melee()
@@ -1175,20 +1633,21 @@ if _G.Switch_Hub_Series_R then
 			wait()
 			if v["Name"] == 'Saber' then
 				Saber_H = true
+				Saber_S:Set(' ✅ : Saber'..' : '..tostring(v.Mastery))
 			end
 			if v["Name"] == 'Bisento' then
 				Bisento_H = true
-	 '..tostring(v.Mastery))
+				Bisento_S:Set(' ✅ : Bisento'..' : '..tostring(v.Mastery))
 			end
 			if v["Name"] == 'Soul Cane' then
 				Soul_Cane_H = true
 				
-				 '..tostring(v.Mastery))
+				Soul_Cane_S:Set(' ✅ : Soul Cane'..' : '..tostring(v.Mastery))
 			end
 			if v["Name"] == 'Rengoku' then
 				Rengoku_H = true
 				
-				 '..tostring(v.Mastery))
+				Rengoku_S:Set(' ✅ : Rengoku'..' : '..tostring(v.Mastery))
 			end
 			if v["Name"] == 'Yama' then
 				Yama_H = true
@@ -1198,19 +1657,19 @@ if _G.Switch_Hub_Series_R then
 				if v.Mastery >= 400 then
 					Yama_M_Q = true
 				end
-				 '..tostring(v.Mastery))
+				Yama_S:Set(' ✅ : Yama'..' : '..tostring(v.Mastery))
 			end
 			if v["Name"] == 'Koko' then
 				Koko_H = true
 				
-				 '..tostring(v.Mastery))
+				Koko_S:Set(' ✅ : Koko'..' : '..tostring(v.Mastery))
 			end
 			if v["Name"] == 'Spikey Trident' then
 				Spikey_Trident_H = true
 				if v.Mastery >= 300 then
 					Spikey_Trident_Mas = true
 				end
-				 Spikey Trident'..' : '..tostring(v.Mastery))
+				Spikey_Trident_S:Set(' ✅ : Spikey Trident'..' : '..tostring(v.Mastery))
 			end
 			if v["Name"] == 'Buddy Sword' then
 				Buddy_Sword_H = true
@@ -1220,7 +1679,7 @@ if _G.Switch_Hub_Series_R then
 			if v["Name"] == 'Canvander' then
 				Canvander_H = true
 				 -- and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character[x].ClassName == 'Tool'
-				: '..tostring(v.Mastery))
+				Canvander_S:Set(' ✅ : Canvander'..' : '..tostring(v.Mastery))
 			end
 			if v["Name"] == 'Tushita' then
 				Tushita_H = true
@@ -1230,51 +1689,52 @@ if _G.Switch_Hub_Series_R then
 				if v.Mastery >= 400 then
 					Tushita_Mas = true
 				end
-				: Tushita'..' : '..tostring(v.Mastery))
+				Tushita_S:Set(' ✅ : Tushita'..' : '..tostring(v.Mastery))
 			end
 			if v["Name"] == 'Hallow Scythe' then
 				Hallow_Scryte_H = true
 				if v.Mastery >= 350 then
 					Hallow_Scryte_Mas = true
 				end
-				 Hallow Scythe'..' : '..tostring(v.Mastery))
+				Hallow_Scythe_S:Set(' ✅ : Hallow Scythe'..' : '..tostring(v.Mastery))
 			end
 			if v["Name"] == 'Midnight Blade' then
 				Midnight_Blade_H = true
 				
-				 '..tostring(v.Mastery))
+				Midnight_Blade_S:Set(' ✅ : Midnight Blade'..' : '..tostring(v.Mastery))
 			end
 			if v["Name"] == 'Shisui' then
 				Shisui_H = true
 				
-				 Shisui'..' : '..tostring(v.Mastery))
+				Shisui_S:Set(' ✅ : Shisui'..' : '..tostring(v.Mastery))
 			end
 			if v["Name"] == 'Saddi' then
 				Saddi_H = true
 				
-				Saddi'..' : '..tostring(v.Mastery))
+				Saddi_S:Set(' ✅ : Saddi'..' : '..tostring(v.Mastery))
 			end
 			if v["Name"] == 'Wando' then
 				Wando_H = true
 				
-				 Wando'..' : '..tostring(v.Mastery))
+				Wando_S:Set(' ✅ : Wando'..' : '..tostring(v.Mastery))
 			end
 			if v["Name"] == 'Dark Dagger' then
 				Dark_Dagger_H = true
 				
-				 Dark Dagger'..' : '..tostring(v.Mastery))
+				Dark_Dagger_S:Set(' ✅ : Dark Dagger'..' : '..tostring(v.Mastery))
 			end
 			if v["Name"] == 'True Triple Katana' then
 				True_Triple_Katana_H = true
 				
-				 True Triple Katana'..' : '..tostring(v.Mastery))
+				True_Triple_Katana_S:Set(' ✅ : True Triple Katana'..' : '..tostring(v.Mastery))
 			end
 			if v["Name"] == 'Cursed Dual Katana' then
+				Cursed_Dual_Katana_Q_S:Set(' Cursed Dual Katana : ✅')
 				Cursed_Dual_Katana_H = true
 				if v.Mastery >= 350 then
 					Cursed_Dual_Katana_Mas = true
 				end
-			 Cursed Dual Katana'..' : '..tostring(v.Mastery))
+				Cursed_Dual_Katana_S:Set(' ✅ : Cursed Dual Katana'..' : '..tostring(v.Mastery))
 			end
 			if v['Name'] == 'Shark Anchor' then
 				Shark_Anchor_H = true
@@ -1288,31 +1748,31 @@ if _G.Switch_Hub_Series_R then
 		if v.Type == "Gun" then
 			wait()
 			if v["Name"] == 'Soul Guitar' then
-		
+				Soul_Guitar_C_S:Set(' Soul Guitar : ✅')
 				Soul_Guitar_H = true
 				if v.Mastery >= 300 then
 					Soul_Guitar_Mas = true
 				end
-				 Soul Guitar'..' : '..tostring(v.Mastery))
+				Soul_Guitar_S:Set(' ✅ : Soul Guitar'..' : '..tostring(v.Mastery))
 			end
 			if v["Name"] == 'Kabucha' then
 				Kabucha_H = true
 				if v.Mastery >= 250 then
 					Kabucha = true
 				end
-				 Kabucha'..' : '..tostring(v.Mastery))
+				Kabucha_S:Set(' ✅ : Kabucha'..' : '..tostring(v.Mastery))
 			end
 			if v["Name"] == 'Acidum Rifle' then
 				Acidum_Rifle_H = true
 				if v.Mastery >= 200 then
 					Acidum_Rifle_Mas = true
 				end
-				 Acidum Rifle'..' : '..tostring(v.Mastery))
+				Acidum_Rifle_S:Set(' ✅ : Acidum Rifle'..' : '..tostring(v.Mastery))
 			end
 			if v["Name"] == 'Serpent Bow' then
 				Serpent_Bow_H = true
 				
-				Serpent Bow'..' : '..tostring(v.Mastery))
+				Serpent_Bow_S:Set(' ✅ : Serpent Bow'..' : '..tostring(v.Mastery))
 			end
 		end
 	end
@@ -1320,26 +1780,26 @@ if _G.Switch_Hub_Series_R then
 		for i,v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryWeapons")) do
 			if v["Name"] == 'Valkyrie Helm' then
 				Valkyrie_Helmet_H = true
-                Valkyrie_Helmet_S_L
-				Valkyrie_Helmet_S
+                Valkyrie_Helmet_S_L:Set(' ✅ : Valkyrie Helm')
+				Valkyrie_Helmet_S:Set(' ✅ : Valkyrie Helm')
 			end
 			if v["Name"] == 'Holy Crown' then
-				Holy_Crown_S
+				Holy_Crown_S:Set(' ✅ : Holy Crown')
 			end
 			if v["Name"] == 'Pale Scarf' then
-				Pale_Scarf_S
+				Pale_Scarf_S:Set(' ✅ : Pale Scarf')
 			end
 			if v["Name"] == 'Dark Coat' then
-				Dark_Coat_S
+				Dark_Coat_S:Set(' ✅ : Dark Coat')
 			end
 			if v["Name"] == 'Swan Glasses' then
-				Swan_Glass_S
+				Swan_Glass_S:Set(' ✅ : Swan Glasses')
 			end
 			if v["Name"] == 'Zebra Cap' then
-				Zebra_Cap_S
+				Zebra_Cap_S:Set(' ✅ : Zebra Cap')
 			end
 			if v["Name"] == 'Warrior Helmet' then
-				Warrior_Helmet_S
+				Warrior_Helmet_S:Set(' ✅ : Warrior Helmet')
 			end
 		end
 	end
@@ -1441,7 +1901,7 @@ if _G.Switch_Hub_Series_R then
 			NameBoss_XNameBoss_X = "The Gorilla King"
 			NameQuestBoss_X = "JungleQuest"
 			QuestLvBoss_X = 3
-			if game.Players.LocalPlayer.Data.Value >= 25 then
+			if game.Players.LocalPlayer.Data.Level.Value >= 25 then
 				CFrameQBoss_X = CFrame.new(-1604.12012, 36.8521118, 154.23732, 0.0648873374, -4.70858913e-06, -0.997892559, 1.41431883e-07, 1, -4.70933674e-06, 0.997892559, 1.64442184e-07, 0.0648873374)
 			end
 			CFrameBoss_X = CFrame.new(-1223.52808, 6.27936459, -502.292664, 0.310949147, -5.66602516e-08, 0.950426519, -3.37275488e-08, 1, 7.06501808e-08, -0.950426519, -5.40241736e-08, 0.310949147)
@@ -4005,7 +4465,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		:Serpent Bow'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		Serpent_Bow_S:Set(' ✅ : Serpent Bow'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
 	end
 	if v == "Yama" and Yama_H and not Yama_Mas then
 		Yama_Mas = true
@@ -4016,7 +4476,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		 Yama'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		Yama_S:Set(' ✅ : Yama'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
 	elseif v == "Tushita" and Tushita_H and not Tushita_Mas then
 		Tushita_Mas = true
 		Farm_Mastery = false
@@ -4026,7 +4486,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		 Tushita'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		Tushita_S:Set(' ✅ : Tushita'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
 	elseif v == "True Triple Katana" and True_Triple_Katana_H and not True_Triple_Katana_Mas then
 		True_Triple_Katana_Mas = true
 		Farm_Mastery = false
@@ -4036,7 +4496,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		True Triple Katana'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		True_Triple_Katana_S:Set(' ✅ : True Triple Katana'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
 	elseif v == "Shisui" and Shisui_H and not Shisui_Mas then
 		Shisui_Mas = true
 		Farm_Mastery = false
@@ -4046,7 +4506,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		 Shisui'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		Shisui_S:Set(' ✅ : Shisui'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
 	elseif v == "Saddi" and Saddi_H and not Saddi_Mas then
 		Saddi_Mas = true
 		Farm_Mastery = false
@@ -4056,7 +4516,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		 Saddi'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		Saddi_S:Set(' ✅ : Saddi'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
 	elseif v == "Wando" and Wando_H and not Wando_Mas then
 		Wando_Mas = true
 		Farm_Mastery = false
@@ -4066,7 +4526,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		 Wando'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		Wando_S:Set(' ✅ : Wando'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
 	elseif v == "Midnight Blade" and Midnight_Blade_H and not Midnight_Blade_Mas then
 		Midnight_Blade_Mas = true
 		Farm_Mastery = false
@@ -4076,7 +4536,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Midnight_Blade_S '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		Midnight_Blade_S:Set(' ✅ : Midnight Blade'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
 	elseif v == "Saber" and Saber_H and not Saber_Mas then
 		Saber_Mas = true
 		Farm_Mastery = false
@@ -4086,7 +4546,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		 Saber'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		Saber_S:Set(' ✅ : Saber'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
 	elseif v == "Rengoku" and Rengoku_H and not Rengoku_Mas then
 		Rengoku_Mas = true
 		Farm_Mastery = false
@@ -4096,7 +4556,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		 Rengoku'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		Rengoku_S:Set(' ✅ : Rengoku'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
 	elseif v == "Hallow Scythe" and Hallow_Scryte_H and not Hallow_Scythe_Mas then
 		Hallow_Scythe_Mas = true
 		Farm_Mastery = false
@@ -4106,7 +4566,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		 Hallow Scythe'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		Hallow_Scythe_S:Set(' ✅ : Hallow Scythe'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
 	elseif v == "Spikey Trident" and Spikey_Trident_H and not Spikey_Trident_Mas then
 		Spikey_Trident_Mas = true
 		Farm_Mastery = false
@@ -4126,7 +4586,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Dark Dagger'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		Dark_Dagger_S:Set(' ✅ : Dark Dagger'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
 	elseif v == "Buddy Sword" and Buddy_Sword_H and not Buddy_Sword_Mas then
 		Buddy_Sword_Mas = true
 		Farm_Mastery = false
@@ -4136,7 +4596,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Buddy Sword'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		Buddy_Sword_S:Set(' ✅ : Buddy Sword'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
 	elseif v == "Canvander" and Canvander_H and not Canvander_Mas then
 		Canvander_Mas = true
 		Farm_Mastery = false
@@ -4146,7 +4606,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		 Canvander'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		Canvander_S:Set(' ✅ : Canvander'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
 	elseif v == "Cursed Dual Katana" and Cursed_Dual_Katana_H and not Cursed_Dual_Katana_Mas then
 		Cursed_Dual_Katana_Mas = true
 		Farm_Mastery = false
@@ -4156,7 +4616,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		 Cursed Dual Katana'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		Cursed_Dual_Katana_S:Set(' ✅ : Cursed Dual Katana'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
 	elseif v == 'Shark Anchor' and Shark_Anchor_H and not Shark_Anchor_Mas then
 		Shark_Anchor_Mas = true
 		Farm_Mastery = false
@@ -4171,7 +4631,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		 Koko'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		Koko_S:Set(' ✅ : Koko'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
 	elseif v == "Twin Hooks" and Twin_Hooks_H and not Twin_Hooks_Mas then
 		Twin_Hooks_Mas = true
 		Farm_Mastery = false
@@ -4186,7 +4646,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		 Bisento'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		Bisento_S:Set(' ✅ : Bisento'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
 	elseif v == "Soul Cane" and Soul_Cane_H and not Soul_Cane_Mas then
 		Soul_Cane_Mas = true
 		Farm_Mastery = false
@@ -4196,7 +4656,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		 Soul Cane'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		Soul_Cane_S:Set(' ✅ : Soul Cane'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
 	end
 	end
 	function FarmBone()
@@ -4232,7 +4692,7 @@ if _G.Switch_Hub_Series_R then
 	end
 	if Three_World and game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakeScientist","Check") == true then
 		Quest_Dough_Awaken = true
-		Dough_Awaken_C_S
+		Dough_Awaken_C_S:Set(' Dough Awaken : ✅')
 	end
 	-- Race Evo
 	if New_World or Three_World then
@@ -4322,22 +4782,22 @@ if _G.Switch_Hub_Series_R then
 						for i,v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryWeapons")) do
 							if v['Name'] == 'Soul Guitar' then
 								Soul_Guitar_H = true
-								Soul_Guitar_S
-								Soul_Guitar_C_S:
+								Soul_Guitar_S:Set(' ✅ : Soul Guitar')
+								Soul_Guitar_C_S:Set(' Soul Guitar : ✅')
 							end
 						end
 						for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
 							if v:IsA('Tool') and v.Name == 'Soul Guitar' then
 								Soul_Guitar_H = true
-								Soul_Guitar_S
-								Soul_Guitar_C_S
+								Soul_Guitar_S:Set(' ✅ : Soul Guitar')
+								Soul_Guitar_C_S:Set(' Soul Guitar : ✅')
 							end
 						end
 						for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
 							if v:IsA('Tool') and v.Name == 'Soul Guitar' then
 								Soul_Guitar_H = true
-								Soul_Guitar_S
-								Soul_Guitar_C_S
+								Soul_Guitar_S:Set(' ✅ : Soul Guitar')
+								Soul_Guitar_C_S:Set(' Soul Guitar : ✅')
 							end
 						end
 					elseif not Old_World then
@@ -4349,13 +4809,13 @@ if _G.Switch_Hub_Series_R then
 					end
 				end
 				if True_Triple_Katana_H then
-					True_Triple_Katana_S_Q
+					True_Triple_Katana_S_Q:Set(' True Triple Katana : ✅')
 				elseif Shisui_Mas and Saddi_Mas and Wando_Mas then
-					True_Triple_Katana_S_Q
+					True_Triple_Katana_S_Q:Set(' True Triple Katana : 3/3')
 				elseif Shisui_Mas and Saddi_Mas or Shisui_Mas and Wando_Mas or Wando_Mas and Saddi_Mas then
-					True_Triple_Katana_S_Q
+					True_Triple_Katana_S_Q:Set(' True Triple Katana : 2/3')
 				elseif Shisui_Mas or Saddi_Mas or Wando_Mas then
-					True_Triple_Katana_S_Q
+					True_Triple_Katana_S_Q:Set(' True Triple Katana : 1/3')
 				end
 				if not List.Quest then -- Melee
 					local Lv = game.Players.LocalPlayer.Data.Level.Value
