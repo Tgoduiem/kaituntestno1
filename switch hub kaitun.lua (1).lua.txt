@@ -4444,28 +4444,28 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Soul_Guitar_S:Set(' ✅ : Soul Guitar'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		
 	elseif v == 'Kabucha' and Kabucha_H and not Kabucha_Mas then
 		Kabucha_Mas = true
 		repeat wait()
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Kabucha_S:Set(' ✅ : Kabucha'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		
 	elseif v == 'Acidum Rifle' and Acidum_Rifle_H and not Acidum_Rifle_Mas then
 		Acidum_Rifle_Mas = true
 		repeat wait()
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Acidum_Rifle_S:Set(' ✅ : Acidum Rifle'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		
 	elseif v == 'Serpent Bow' and Serpent_Bow_H and not Serpent_Bow_Mas then
 		Serpent_Bow_Mas = true
 		repeat wait()
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Serpent_Bow_S:Set(' ✅ : Serpent Bow'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		
 	end
 	if v == "Yama" and Yama_H and not Yama_Mas then
 		Yama_Mas = true
@@ -4476,7 +4476,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Yama_S:Set(' ✅ : Yama'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+	
 	elseif v == "Tushita" and Tushita_H and not Tushita_Mas then
 		Tushita_Mas = true
 		Farm_Mastery = false
@@ -4486,7 +4486,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Tushita_S:Set(' ✅ : Tushita'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+	
 	elseif v == "True Triple Katana" and True_Triple_Katana_H and not True_Triple_Katana_Mas then
 		True_Triple_Katana_Mas = true
 		Farm_Mastery = false
@@ -4496,7 +4496,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		True_Triple_Katana_S:Set(' ✅ : True Triple Katana'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+	
 	elseif v == "Shisui" and Shisui_H and not Shisui_Mas then
 		Shisui_Mas = true
 		Farm_Mastery = false
@@ -4506,7 +4506,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Shisui_S:Set(' ✅ : Shisui'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		
 	elseif v == "Saddi" and Saddi_H and not Saddi_Mas then
 		Saddi_Mas = true
 		Farm_Mastery = false
@@ -4516,7 +4516,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Saddi_S:Set(' ✅ : Saddi'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+	
 	elseif v == "Wando" and Wando_H and not Wando_Mas then
 		Wando_Mas = true
 		Farm_Mastery = false
@@ -4526,7 +4526,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Wando_S:Set(' ✅ : Wando'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		
 	elseif v == "Midnight Blade" and Midnight_Blade_H and not Midnight_Blade_Mas then
 		Midnight_Blade_Mas = true
 		Farm_Mastery = false
@@ -4536,7 +4536,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Midnight_Blade_S:Set(' ✅ : Midnight Blade'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		
 	elseif v == "Saber" and Saber_H and not Saber_Mas then
 		Saber_Mas = true
 		Farm_Mastery = false
@@ -4546,7 +4546,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Saber_S:Set(' ✅ : Saber'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		
 	elseif v == "Rengoku" and Rengoku_H and not Rengoku_Mas then
 		Rengoku_Mas = true
 		Farm_Mastery = false
@@ -4556,7 +4556,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Rengoku_S:Set(' ✅ : Rengoku'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		
 	elseif v == "Hallow Scythe" and Hallow_Scryte_H and not Hallow_Scythe_Mas then
 		Hallow_Scythe_Mas = true
 		Farm_Mastery = false
@@ -4566,7 +4566,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Hallow_Scythe_S:Set(' ✅ : Hallow Scythe'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		
 	elseif v == "Spikey Trident" and Spikey_Trident_H and not Spikey_Trident_Mas then
 		Spikey_Trident_Mas = true
 		Farm_Mastery = false
@@ -4576,7 +4576,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Spikey_Trident_S:Set(' ✅ : Spikey Trident'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		
 	elseif v == "Dark Dagger" and Dark_Dagger_H and not Dark_Dagger_Mas then
 		Dark_Dagger_Mas = true
 		Farm_Mastery = false
@@ -4586,7 +4586,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Dark_Dagger_S:Set(' ✅ : Dark Dagger'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		
 	elseif v == "Buddy Sword" and Buddy_Sword_H and not Buddy_Sword_Mas then
 		Buddy_Sword_Mas = true
 		Farm_Mastery = false
@@ -4596,7 +4596,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Buddy_Sword_S:Set(' ✅ : Buddy Sword'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		
 	elseif v == "Canvander" and Canvander_H and not Canvander_Mas then
 		Canvander_Mas = true
 		Farm_Mastery = false
@@ -4606,7 +4606,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Canvander_S:Set(' ✅ : Canvander'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		
 	elseif v == "Cursed Dual Katana" and Cursed_Dual_Katana_H and not Cursed_Dual_Katana_Mas then
 		Cursed_Dual_Katana_Mas = true
 		Farm_Mastery = false
@@ -4616,7 +4616,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Cursed_Dual_Katana_S:Set(' ✅ : Cursed Dual Katana'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		
 	elseif v == 'Shark Anchor' and Shark_Anchor_H and not Shark_Anchor_Mas then
 		Shark_Anchor_Mas = true
 		Farm_Mastery = false
@@ -4631,7 +4631,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Koko_S:Set(' ✅ : Koko'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		
 	elseif v == "Twin Hooks" and Twin_Hooks_H and not Twin_Hooks_Mas then
 		Twin_Hooks_Mas = true
 		Farm_Mastery = false
@@ -4646,7 +4646,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Bisento_S:Set(' ✅ : Bisento'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		
 	elseif v == "Soul Cane" and Soul_Cane_H and not Soul_Cane_Mas then
 		Soul_Cane_Mas = true
 		Farm_Mastery = false
@@ -4656,7 +4656,7 @@ if _G.Switch_Hub_Series_R then
 			Get_Item_Inventory(v)
 			EquipWeapon(v)
 		until game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') and game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Name == v
-		Soul_Cane_S:Set(' ✅ : Soul Cane'..' : '..tostring(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Level.Value))
+		
 	end
 	end
 	function FarmBone()
@@ -4692,7 +4692,7 @@ if _G.Switch_Hub_Series_R then
 	end
 	if Three_World and game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakeScientist","Check") == true then
 		Quest_Dough_Awaken = true
-		Dough_Awaken_C_S:Set(' Dough Awaken : ✅')
+		
 	end
 	-- Race Evo
 	if New_World or Three_World then
@@ -4719,11 +4719,7 @@ if _G.Switch_Hub_Series_R then
 		end
 	end
 	if Evo_Race_V3_H then
-		Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 3')
-	elseif Evo_Race_V2_H and Evo_Race_V1_H then
-		Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 2')
-	elseif Evo_Race_V1_H then
-		Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 1')
+		
 	end
     if not table.find(getgenv().Quest['Evo Race']['Select Race'],tostring(game.Players.LocalPlayer.Data.Race.Value)) and _G.Race['Lock Race'] then
 		Select_race_low  = true
@@ -4782,22 +4778,19 @@ if _G.Switch_Hub_Series_R then
 						for i,v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryWeapons")) do
 							if v['Name'] == 'Soul Guitar' then
 								Soul_Guitar_H = true
-								Soul_Guitar_S:Set(' ✅ : Soul Guitar')
-								Soul_Guitar_C_S:Set(' Soul Guitar : ✅')
+								
 							end
 						end
 						for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
 							if v:IsA('Tool') and v.Name == 'Soul Guitar' then
 								Soul_Guitar_H = true
-								Soul_Guitar_S:Set(' ✅ : Soul Guitar')
-								Soul_Guitar_C_S:Set(' Soul Guitar : ✅')
+								
 							end
 						end
 						for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
 							if v:IsA('Tool') and v.Name == 'Soul Guitar' then
 								Soul_Guitar_H = true
-								Soul_Guitar_S:Set(' ✅ : Soul Guitar')
-								Soul_Guitar_C_S:Set(' Soul Guitar : ✅')
+								
 							end
 						end
 					elseif not Old_World then
@@ -4809,13 +4802,13 @@ if _G.Switch_Hub_Series_R then
 					end
 				end
 				if True_Triple_Katana_H then
-					True_Triple_Katana_S_Q:Set(' True Triple Katana : ✅')
+					
 				elseif Shisui_Mas and Saddi_Mas and Wando_Mas then
-					True_Triple_Katana_S_Q:Set(' True Triple Katana : 3/3')
+					
 				elseif Shisui_Mas and Saddi_Mas or Shisui_Mas and Wando_Mas or Wando_Mas and Saddi_Mas then
-					True_Triple_Katana_S_Q:Set(' True Triple Katana : 2/3')
+					
 				elseif Shisui_Mas or Saddi_Mas or Wando_Mas then
-					True_Triple_Katana_S_Q:Set(' True Triple Katana : 1/3')
+					
 				end
 				if not List.Quest then -- Melee
 					local Lv = game.Players.LocalPlayer.Data.Level.Value
@@ -4867,7 +4860,7 @@ if _G.Switch_Hub_Series_R then
 									}
 									if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args)) == 1 or game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args)) == 2 then
 										Superhuman_Buy = true
-										Superhuman_S:Set(' ✅ : Superhuman'..' : '..Load_Mastery_Melee('Superhuman'))
+										
 									end
 								end
 							end
@@ -4879,7 +4872,7 @@ if _G.Switch_Hub_Series_R then
 							if Get_Mastery_Melee('Superhuman',Mas_Superhuman) then
 								Farm_Mastery = false
 								Superhuman_H = true
-								Superhuman_S:Set(' ✅ : Superhuman'..' : '..tostring(GetMastery('Superhuman')))
+								
 							end
 							Get_Melee_Check('Superhuman')
 						end
@@ -4889,12 +4882,12 @@ if _G.Switch_Hub_Series_R then
 								if New_World and not game:GetService("Workspace").Map.IceCastle.Hall.LibraryDoor:FindFirstChild('Keyhole') then
 									if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep") == 1 or game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep") == 2 then
 										Death_Step_Buy = true
-										Death_Step_S:Set(' ✅ : Death Step'..' : '..Load_Mastery_Melee('Death Step'))
+										
 									end
 								elseif Three_World then
 									if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep") == 1 or game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep") == 2 then
 										Death_Step_Buy = true
-										Death_Step_S:Set(' ✅ : Death Step'..' : '..Load_Mastery_Melee('Death Step'))
+										
 									end
 								end
 							elseif game.Players.LocalPlayer.Data.Fragments.Value < 5000 then
@@ -4909,7 +4902,7 @@ if _G.Switch_Hub_Series_R then
 								if Sharkman_Karate_Q_C then -- Quest Sharkman Karate
 									if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate") == 1 or game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate") == 2 then
 										Sharkman_Karate_Buy = true
-										Sharkman_Karate_S:Set(' ✅ : Sharkman Karate'..' : '..Load_Mastery_Melee('Sharkman Karate'))
+										
 									end
 								end
 							elseif game.Players.LocalPlayer.Data.Fragments.Value < 5000 then
@@ -4925,7 +4918,7 @@ if _G.Switch_Hub_Series_R then
 									game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyElectricClaw", true)
 									if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw") == 1 or game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw") == 2 then
 										Electric_Claw_Buy = true
-										Electric_Claw_S:Set(' ✅ : Electric Claw'..' : '..Load_Mastery_Melee('Electric Claw'))
+										
 									end
 								elseif Three_World then
 									Quest_Electric_Claw = true
@@ -4942,7 +4935,7 @@ if _G.Switch_Hub_Series_R then
 								if Three_World then -- Quest Dragon Talon
 									if game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyDragonTalon") == 1 or game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyDragonTalon") == 2 then
 										Dragon_Talon_Buy = true
-										Dragon_Talon_S:Set(' ✅ : Dragon Talon'..' : '..Load_Mastery_Melee('Dragon Talon'))
+										
 									end
 								end
 							elseif game.Players.LocalPlayer.Data.Fragments.Value < 5000 then
@@ -4968,7 +4961,7 @@ if _G.Switch_Hub_Series_R then
 								Farm_Mastery = false
 								Start_Farm_Mastery = false
 								Death_Step_H = true
-								Death_Step_S:Set(' ✅ : Death Step'..' : '..tostring(GetMastery('Death Step')))
+								
 							end
 							Get_Melee_Check('Death Step')
 						elseif _G.Melee['Sharkman Karate'] and not Sharkman_Karate_Buy and not Sharkman_Karate_M then
@@ -4985,8 +4978,7 @@ if _G.Switch_Hub_Series_R then
 							if Get_Mastery_Melee('Sharkman Karate',Mas_Sharkman_Karate) then
 								Farm_Mastery = false
 								Start_Farm_Mastery = false
-								Sharkman_Karate_H = true
-								Sharkman_Karate_S:Set(' ✅ : Sharkman Karate'..' : '..tostring(GetMastery('Sharkman Karate')))
+								
 							end
 							Get_Melee_Check('Sharkman Karate')
 						elseif _G.Melee['Electric Claw'] and not Electric_Claw_Buy and not Electric_Claw_M then
@@ -5004,7 +4996,7 @@ if _G.Switch_Hub_Series_R then
 								Farm_Mastery = false
 								Start_Farm_Mastery = false
 								Electric_Claw_H = true
-								Electric_Claw_S:Set(' ✅ : Electric Claw'..' : '..tostring(GetMastery('Electric Claw')))
+								
 							end
 							Get_Melee_Check('Electric Claw')
 						elseif _G.Melee['Dragon Talon'] and not Dragon_Talon_Buy and not Dragon_Talon_M then
@@ -5031,7 +5023,7 @@ if _G.Switch_Hub_Series_R then
 								Farm_Mastery = false
 								Start_Farm_Mastery = false
 								Dragon_Talon_H = true
-								Dragon_Talon_S:Set(' ✅ : Dragon Talon'..' : '..tostring(GetMastery('Dragon Talon')))
+								
 							end
 							Get_Melee_Check('Dragon Talon')
 						elseif _G.Melee['Godhuman'] and Superhuman_H and Death_Step_H and Sharkman_Karate_H and Electric_Claw_H and Dragon_Talon_H and not God_Human_Buy then 
@@ -5046,15 +5038,15 @@ if _G.Switch_Hub_Series_R then
 								Sharkman_Karate_H = false
 								Electric_Claw_H = false
 								Dragon_Talon_H = false
-								God_Human_C_S:Set(' Godhuman : 1/5')
+								
 							elseif Mas_Dragon_Talon >= 400 then
 								if God_Human_Q_C then
-									God_Human_C_S:Set(' Godhuman : ✅')
+									
 									if game.Players.LocalPlayer.Data.Beli.Value >= 5000000 and game.Players.LocalPlayer.Data.Fragments.Value >= 5000 then
 										game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman",true)
 										if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman") == 1 or game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman") == 2 then
 											God_Human_Buy = true
-											God_Human_S:Set(' ✅ : Godhuman'..' : '..Load_Mastery_Melee('Godhuman'))
+											
 										end
 									end
 								elseif game.Players.LocalPlayer.Data.Level.Value >= 2400 then
@@ -5075,7 +5067,7 @@ if _G.Switch_Hub_Series_R then
 								Farm_Mastery = false
 								Start_Farm_Mastery = false
 								God_Human_H = true
-								God_Human_S:Set(' ✅ : Godhuman'..' : '..tostring(GetMastery('Godhuman')))
+								
 							end
 							if not Three_World then
 								if game.Players.LocalPlayer.Backpack:FindFirstChild('Godhuman') and game.Players.LocalPlayer.Backpack:FindFirstChild('Godhuman').Level.Value < 350 or game.Players.LocalPlayer.Character:FindFirstChild('Godhuman') and game.Players.LocalPlayer.Character:FindFirstChild('Godhuman').Level.Value < 350 then
@@ -5194,7 +5186,7 @@ if _G.Switch_Hub_Series_R then
 								opdskfgdf = true
 							end
 							if not Tushita_M_Q then
-								Cursed_Dual_Katana_Q_S:Set(' Cursed Dual Katana : 1/10')
+								
 								CDK_Q_S_C = 1
 								if game.Players.LocalPlayer.Character:FindFirstChild('Tushita') or game.Players.LocalPlayer.Backpack:FindFirstChild('Tushita') then
 									for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
@@ -5283,7 +5275,7 @@ if _G.Switch_Hub_Series_R then
 									Get_Item_Inventory('Tushita')
 								end
 							elseif not Yama_M_Q then
-								Cursed_Dual_Katana_Q_S:Set(' Cursed Dual Katana : 2/10')
+								
 								CDK_Q_S_C = 2
 								if game.Players.LocalPlayer.Character:FindFirstChild('Yama') or game.Players.LocalPlayer.Backpack:FindFirstChild('Yama') then
 									for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
@@ -5505,7 +5497,7 @@ if _G.Switch_Hub_Series_R then
 								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("MysteriousMan","1")
 								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("MysteriousMan","2")
 								True_Triple_Katana_H = true
-								True_Triple_Katana_S:Set(" ✅ : True Triple Katana")
+								
 							end
 							if Sword_Attack_X == nil then
 								for i,v in pairs(_G.Mastery['Setting Sword']) do
@@ -5659,11 +5651,7 @@ if _G.Switch_Hub_Series_R then
 								end
 							end
 							if Evo_Race_V3_H then
-								Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 3')
-							elseif Evo_Race_V2_H then
-								Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 2')
-							else
-								Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value))
+						
 							end
 							if not Evo_Race_V3_H and Three_World then
 								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")
@@ -5677,12 +5665,7 @@ if _G.Switch_Hub_Series_R then
 								elseif not Evo_Race_V2_H then
 									if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ZQuestProgress","Check") ~= 1 then
 										Evo_Race_V2_H = true
-										if Evo_Race_V3_H then
-											Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 3')
-										elseif Evo_Race_V2_H then
-											Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 2')
-										elseif Evo_Race_V1_H then
-											Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 1')
+										
 										end
 										if _G.Quest['Evo Race V3'] and not Evo_Race_V3_H and game.Players.LocalPlayer.Data.Level.Value >= 1500 and New_World then
 											if game.Players.LocalPlayer.Data.Beli.Value >= 2000000 then
@@ -5695,12 +5678,7 @@ if _G.Switch_Hub_Series_R then
 										List.Quest = true
 									elseif Don_Swan_H and game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Wenlocktoad","1") ~= nil then
 										Evo_Race_V2_H = true
-										if Evo_Race_V3_H then
-											Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 3')
-										elseif Evo_Race_V2_H then
-											Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 2')
-										elseif Evo_Race_V1_H then
-											Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 1')
+										
 										end
 										if _G.Quest['Evo Race V3'] and not Evo_Race_V3_H and game.Players.LocalPlayer.Data.Level.Value >= 1500 and New_World then
 											if game.Players.LocalPlayer.Data.Beli.Value >= 2000000 then
@@ -5742,12 +5720,7 @@ if _G.Switch_Hub_Series_R then
 					elseif _G.Quest['Evo Race V2'] and not Evo_Race_V2_H and game.Players.LocalPlayer.Data.Level.Value >= 2550 and New_World then
 						if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ZQuestProgress","Check") ~= 1 then
 							Evo_Race_V2_H = true
-							if Evo_Race_V3_H then
-								Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 3')
-							elseif Evo_Race_V2_H then
-								Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 2')
-							elseif Evo_Race_V1_H then
-								Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 1')
+							
 							end
 							if _G.Quest['Evo Race V3'] and not Evo_Race_V3_H and game.Players.LocalPlayer.Data.Level.Value >= 1500 and New_World then
 								if game.Players.LocalPlayer.Data.Beli.Value >= 2000000 then
@@ -5760,12 +5733,7 @@ if _G.Switch_Hub_Series_R then
 							List.Quest = true
 						elseif Don_Swan_H and game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Wenlocktoad","1") ~= nil then
 							Evo_Race_V2_H = true
-							if Evo_Race_V3_H then
-								Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 3')
-							elseif Evo_Race_V2_H then
-								Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 2')
-							elseif Evo_Race_V1_H then
-								Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 1')
+							
 							end
 							if _G.Quest['Evo Race V3'] and not Evo_Race_V3_H and game.Players.LocalPlayer.Data.Level.Value >= 1500 and New_World then
 								if game.Players.LocalPlayer.Data.Beli.Value >= 2000000 then
@@ -6011,7 +5979,7 @@ if _G.Switch_Hub_Series_R then
 						end
 					elseif game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("HornedMan","Bet") == 1 then
 						RGB_H = true
-						RGB_S_Q:Set(' RGB : ✅')
+						
 						Check_RGB_Spawn = nil
 					end
 				end
@@ -6078,17 +6046,17 @@ if _G.Switch_Hub_Series_R then
 				game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Slingshot","1")
 				if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Slingshot","2") == 1 then
 					Kabucha_H = true
-					Kabucha_S:Set(' ✅ : Kabucha')
+					
 				end
 			end
 			if game.Players.LocalPlayer.Data.Beli.Value >= 3000000 then
 				if not Bisento_H and game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Bisento") == 1 then
 					Bisento_H = true
-					Bisento_S:Set(' ✅ : Bisento')
+					
 				end
 				if not Soul_Cane_H and game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Soul Cane") == 1 then
 					Soul_Cane_H = true
-					Soul_Cane_S:Set(' ✅ : Soul Cane')
+					
 				end
 			end
 			if _G.Sword['Midnight Blade'] and not Midnight_Blade_H and game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Ectoplasm","Check") >= 100 then
@@ -6156,325 +6124,6 @@ if _G.Switch_Hub_Series_R then
 	-- Get Sword
 	function GetLoadSword()
 		for i,v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryWeapons")) do
-		if not Saber_H then
-			if v["Name"] == 'Saber' then
-				Saber_S:Set(' ✅ : Saber')
-				Saber_H = true
-			end
-		end
-		if not Bisento_H then
-			if v["Name"] == 'Bisento' then
-				Bisento_S:Set(' ✅ : Bisento')
-				Bisento_H = true
-			end
-		end
-		if not Soul_Cane_H then
-			if v["Name"] == 'Soul Cane' then
-				Soul_Cane_S:Set(' ✅ : Soul Cane')
-				Soul_Cane_H = true
-			end
-		end
-		if not Rengoku_H then
-			if v["Name"] == 'Rengoku' then
-				Rengoku_S:Set(' ✅ : Rengoku')
-				Rengoku_H = true
-			end
-		end
-		if not Yama_H then
-			if v["Name"] == 'Yama' then
-				Yama_S:Set(' ✅ : Yama')
-				Yama_H = true
-			end
-		end
-		if not Koko_H then
-			if v["Name"] == 'Koko' then
-				Koko_S:Set(' ✅ : Koko')
-				Koko_H = true
-			end
-		end
-		if not Spikey_Trident_H then
-			if v["Name"] == 'Spikey Trident' then
-				Spikey_Trident_S:Set(' ✅ : Spikey Trident')
-				Spikey_Trident_H = true
-			end
-		end
-		if not Buddy_Sword_H then
-			if v["Name"] == 'Buddy Sword' then
-				Buddy_Sword_S:Set(' ✅ : Buddy Sword')
-				Buddy_Sword_H = true
-			end
-		end
-		if not Canvander_H then
-			if v["Name"] == 'Canvander' then
-				Canvander_S:Set(' ✅ : Canvander')
-				Canvander_H = true
-			end
-		end
-		if not Tushita_H then
-			if v["Name"] == 'Tushita' then
-				Tushita_S:Set(' ✅ : Tushita')
-				Tushita_H = true
-			end
-		end
-		if not Hallow_Scryte_H then
-			if v["Name"] == 'Hallow Scythe' then
-				Hallow_Scythe_S:Set(' ✅ : Hallow Scythe')
-				Hallow_Scryte_H = true
-			end
-		end
-		if not Midnight_Blade_H then
-			if v["Name"] == 'Midnight Blade' then
-				Midnight_Blade_S:Set(' ✅ : Midnight Blade')
-				Midnight_Blade_H = true
-			end
-		end
-		if not Shisui_H then
-			if v["Name"] == 'Shisui' then
-				Shisui_S:Set(' ✅ : Shisui')
-				Shisui_H = true
-			end
-		end
-		if not Saddi_H then
-			if v["Name"] == 'Saddi' then
-				Saddi_S:Set(' ✅ : Saddi')
-				Saddi_H = true
-			end
-		end
-		if not Wando_H then
-			if v["Name"] == 'Wando' then
-				Wando_S:Set(' ✅ : Wando')
-				Wando_H = true
-			end
-		end
-		if not Dark_Dagger_H then
-			if v["Name"] == 'Dark Dagger' then
-				Dark_Dagger_S:Set(' ✅ : Dark Dagger')
-				Dark_Dagger_H = true
-			end
-		end
-		if not True_Triple_Katana_H then
-			if v["Name"] == 'True Triple Katana' then
-				True_Triple_Katana_S:Set(' ✅ : True Triple Katana')
-				True_Triple_Katana_H = true
-			end
-		end
-		if not Cursed_Dual_Katana_H then
-			if v["Name"] == 'Cursed Dual Katana' then
-				Cursed_Dual_Katana_S:Set(' ✅ : Cursed Dual Katana')
-				Cursed_Dual_Katana_H = true
-			end
-		end
-	
-		if not Soul_Cane_H then
-			if v["Name"] == 'Soul Guitar' then
-				Soul_Guitar_S:Set(' ✅ : Soul Guitar')
-				Soul_Cane_H = true
-			end
-		end
-		if not Kabucha_H then
-			if v["Name"] == 'Kabucha' then
-				Kabucha_S:Set(' ✅ : Kabucha')
-				Kabucha_H = true
-			end
-		end
-		if not Acidum_Rifle_H then
-			if v["Name"] == 'Acidum Rifle' then
-				Acidum_Rifle_S:Set(' ✅ : Acidum Rifle')
-				Acidum_Rifle_H = true
-			end
-		end
-		if not Serpent_Bow_H then
-			if v["Name"] == 'Serpent Bow' then
-				Serpent_Bow_S:Set(' ✅ : Serpent Bow')
-				Serpent_Bow_H = true
-			end
-		end
-	
-		if v["Name"] == 'Valkyrie Helm' then
-			Valkyrie_Helmet_H = true
-            Valkyrie_Helmet_S_L:Set(' ✅ : Valkyrie Helm')
-			Valkyrie_Helmet_S:Set(' ✅ : Valkyrie Helm')
-		end
-		if v["Name"] == 'Holy Crown' then
-			Holy_Crown_S:Set(' ✅ : Holy Crown')
-		end
-		if v["Name"] == 'Pale Scarf' then
-			Pale_Scarf_S:Set(' ✅ : Pale Scarf')
-		end
-		if v["Name"] == 'Dark Coat' then
-			Dark_Coat_S:Set(' ✅ : Dark Coat')
-		end
-		if v["Name"] == 'Swan Glasses' then
-			Swan_Glass_S:Set(' ✅ : Swan Glasses')
-		end
-		if v["Name"] == 'Zebra Cap' then
-			Zebra_Cap_S:Set(' ✅ : Zebra Cap')
-		end
-		if v["Name"] == 'Warrior Helmet' then
-			Warrior_Helmet_S:Set(' ✅ : Warrior Helmet')
-		end
-	end
-	for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
-		if v:IsA('Tool') then
-			local v = {
-				['Name'] = v.Name
-			}
-			if not Saber_H then
-				if v["Name"] == 'Saber' then
-					Saber_S:Set(' ✅ : Saber')
-					Saber_H = true
-				end
-			end
-			if not Bisento_H then
-				if v["Name"] == 'Bisento' then
-					Bisento_S:Set(' ✅ : Bisento')
-					Bisento_H = true
-				end
-			end
-			if not Soul_Cane_H then
-				if v["Name"] == 'Soul Cane' then
-					Soul_Cane_S:Set(' ✅ : Soul Cane')
-					Soul_Cane_H = true
-				end
-			end
-			if not Rengoku_H then
-				if v["Name"] == 'Rengoku' then
-					Rengoku_S:Set(' ✅ : Rengoku')
-					Rengoku_H = true
-				end
-			end
-			if not Yama_H then
-				if v["Name"] == 'Yama' then
-					Yama_S:Set(' ✅ : Yama')
-					Yama_H = true
-				end
-			end
-			if not Koko_H then
-				if v["Name"] == 'Koko' then
-					Koko_S:Set(' ✅ : Koko')
-					Koko_H = true
-				end
-			end
-			if not Spikey_Trident_H then
-				if v["Name"] == 'Spikey Trident' then
-					Spikey_Trident_S:Set(' ✅ : Spikey Trident')
-					Spikey_Trident_H = true
-				end
-			end
-			if not Buddy_Sword_H then
-				if v["Name"] == 'Buddy Sword' then
-					Buddy_Sword_S:Set(' ✅ : Buddy Sword')
-					Buddy_Sword_H = true
-				end
-			end
-			if not Canvander_H then
-				if v["Name"] == 'Canvander' then
-					Canvander_S:Set(' ✅ : Canvander')
-					Canvander_H = true
-				end
-			end
-			if not Tushita_H then
-				if v["Name"] == 'Tushita' then
-					Tushita_S:Set(' ✅ : Tushita')
-					Tushita_H = true
-				end
-			end
-			if not Hallow_Scryte_H then
-				if v["Name"] == 'Hallow Scythe' then
-					Hallow_Scythe_S:Set(' ✅ : Hallow Scythe')
-					Hallow_Scryte_H = true
-				end
-			end
-			if not Midnight_Blade_H then
-				if v["Name"] == 'Midnight Blade' then
-					Midnight_Blade_S:Set(' ✅ : Midnight Blade')
-					Midnight_Blade_H = true
-				end
-			end
-			if not Shisui_H then
-				if v["Name"] == 'Shisui' then
-					Shisui_S:Set(' ✅ : Shisui')
-					Shisui_H = true
-				end
-			end
-			if not Saddi_H then
-				if v["Name"] == 'Saddi' then
-					Saddi_S:Set(' ✅ : Saddi')
-					Saddi_H = true
-				end
-			end
-			if not Wando_H then
-				if v["Name"] == 'Wando' then
-					Wando_S:Set(' ✅ : Wando')
-					Wando_H = true
-				end
-			end
-			if not Dark_Dagger_H then
-				if v["Name"] == 'Dark Dagger' then
-					Dark_Dagger_S:Set(' ✅ : Dark Dagger')
-					Dark_Dagger_H = true
-				end
-			end
-			if not True_Triple_Katana_H then
-				if v["Name"] == 'True Triple Katana' then
-					True_Triple_Katana_S:Set(' ✅ : True Triple Katana')
-					True_Triple_Katana_H = true
-				end
-			end
-			if not Cursed_Dual_Katana_H then
-				if v["Name"] == 'Cursed Dual Katana' then
-					Cursed_Dual_Katana_S:Set(' ✅ : Cursed Dual Katana')
-					Cursed_Dual_Katana_H = true
-				end
-			end
-		
-			if not Soul_Cane_H then
-				if v["Name"] == 'Soul Guitar' then
-					Soul_Guitar_S:Set(' ✅ : Soul Guitar')
-					Soul_Cane_H = true
-				end
-			end
-			if not Kabucha_H then
-				if v["Name"] == 'Kabucha' then
-					Kabucha_S:Set(' ✅ : Kabucha')
-					Kabucha_H = true
-				end
-			end
-			if not Acidum_Rifle_H then
-				if v["Name"] == 'Acidum Rifle' then
-					Acidum_Rifle_S:Set(' ✅ : Acidum Rifle')
-					Acidum_Rifle_H = true
-				end
-			end
-			if not Serpent_Bow_H then
-				if v["Name"] == 'Serpent Bow' then
-					Serpent_Bow_S:Set(' ✅ : Serpent Bow')
-					Serpent_Bow_H = true
-				end
-			end
-		
-			if v["Name"] == 'Valkyrie Helm' then
-				Valkyrie_Helmet_H = true
-                Valkyrie_Helmet_S_L:Set(' ✅ : Valkyrie Helm')
-				Valkyrie_Helmet_S:Set(' ✅ : Valkyrie Helm')
-			end
-			if v["Name"] == 'Holy Crown' then
-				Holy_Crown_S:Set(' ✅ : Holy Crown')
-			end
-			if v["Name"] == 'Pale Scarf' then
-				Pale_Scarf_S:Set(' ✅ : Pale Scarf')
-			end
-			if v["Name"] == 'Dark Coat' then
-				Dark_Coat_S:Set(' ✅ : Dark Coat')
-			end
-			if v["Name"] == 'Swan Glasses' then
-				Swan_Glass_S:Set(' ✅ : Swan Glasses')
-			end
-			if v["Name"] == 'Zebra Cap' then
-				Zebra_Cap_S:Set(' ✅ : Zebra Cap')
-			end
-			if v["Name"] == 'Warrior Helmet' then
-				Warrior_Helmet_S:Set(' ✅ : Warrior Helmet')
 			end
 		end
 	end
@@ -6483,165 +6132,7 @@ if _G.Switch_Hub_Series_R then
 			local v = {
 				['Name'] = v.Name
 			}
-			if not Saber_H then
-				if v["Name"] == 'Saber' then
-					Saber_S:Set(' ✅ : Saber')
-					Saber_H = true
-				end
-			end
-			if not Bisento_H then
-				if v["Name"] == 'Bisento' then
-					Bisento_S:Set(' ✅ : Bisento')
-					Bisento_H = true
-				end
-			end
-			if not Soul_Cane_H then
-				if v["Name"] == 'Soul Cane' then
-					Soul_Cane_S:Set(' ✅ : Soul Cane')
-					Soul_Cane_H = true
-				end
-			end
-			if not Rengoku_H then
-				if v["Name"] == 'Rengoku' then
-					Rengoku_S:Set(' ✅ : Rengoku')
-					Rengoku_H = true
-				end
-			end
-			if not Yama_H then
-				if v["Name"] == 'Yama' then
-					Yama_S:Set(' ✅ : Yama')
-					Yama_H = true
-				end
-			end
-			if not Koko_H then
-				if v["Name"] == 'Koko' then
-					Koko_S:Set(' ✅ : Koko')
-					Koko_H = true
-				end
-			end
-			if not Spikey_Trident_H then
-				if v["Name"] == 'Spikey Trident' then
-					Spikey_Trident_S:Set(' ✅ : Spikey Trident')
-					Spikey_Trident_H = true
-				end
-			end
-			if not Buddy_Sword_H then
-				if v["Name"] == 'Buddy Sword' then
-					Buddy_Sword_S:Set(' ✅ : Buddy Sword')
-					Buddy_Sword_H = true
-				end
-			end
-			if not Canvander_H then
-				if v["Name"] == 'Canvander' then
-					Canvander_S:Set(' ✅ : Canvander')
-					Canvander_H = true
-				end
-			end
-			if not Tushita_H then
-				if v["Name"] == 'Tushita' then
-					Tushita_S:Set(' ✅ : Tushita')
-					Tushita_H = true
-				end
-			end
-			if not Hallow_Scryte_H then
-				if v["Name"] == 'Hallow Scythe' then
-					Hallow_Scythe_S:Set(' ✅ : Hallow Scythe')
-					Hallow_Scryte_H = true
-				end
-			end
-			if not Midnight_Blade_H then
-				if v["Name"] == 'Midnight Blade' then
-					Midnight_Blade_S:Set(' ✅ : Midnight Blade')
-					Midnight_Blade_H = true
-				end
-			end
-			if not Shisui_H then
-				if v["Name"] == 'Shisui' then
-					Shisui_S:Set(' ✅ : Shisui')
-					Shisui_H = true
-				end
-			end
-			if not Saddi_H then
-				if v["Name"] == 'Saddi' then
-					Saddi_S:Set(' ✅ : Saddi')
-					Saddi_H = true
-				end
-			end
-			if not Wando_H then
-				if v["Name"] == 'Wando' then
-					Wando_S:Set(' ✅ : Wando')
-					Wando_H = true
-				end
-			end
-			if not Dark_Dagger_H then
-				if v["Name"] == 'Dark Dagger' then
-					Dark_Dagger_S:Set(' ✅ : Dark Dagger')
-					Dark_Dagger_H = true
-				end
-			end
-			if not True_Triple_Katana_H then
-				if v["Name"] == 'True Triple Katana' then
-					True_Triple_Katana_S:Set(' ✅ : True Triple Katana')
-					True_Triple_Katana_H = true
-				end
-			end
-			if not Cursed_Dual_Katana_H then
-				if v["Name"] == 'Cursed Dual Katana' then
-					Cursed_Dual_Katana_S:Set(' ✅ : Cursed Dual Katana')
-					Cursed_Dual_Katana_H = true
-				end
-			end
-		
-			if not Soul_Cane_H then
-				if v["Name"] == 'Soul Guitar' then
-					Soul_Guitar_S:Set(' ✅ : Soul Guitar')
-					Soul_Cane_H = true
-				end
-			end
-			if not Kabucha_H then
-				if v["Name"] == 'Kabucha' then
-					Kabucha_S:Set(' ✅ : Kabucha')
-					Kabucha_H = true
-				end
-			end
-			if not Acidum_Rifle_H then
-				if v["Name"] == 'Acidum Rifle' then
-					Acidum_Rifle_S:Set(' ✅ : Acidum Rifle')
-					Acidum_Rifle_H = true
-				end
-			end
-			if not Serpent_Bow_H then
-				if v["Name"] == 'Serpent Bow' then
-					Serpent_Bow_S:Set(' ✅ : Serpent Bow')
-					Serpent_Bow_H = true
-				end
-			end
-		
-			if v["Name"] == 'Valkyrie Helm' then
-				Valkyrie_Helmet_H = true
-                Valkyrie_Helmet_S_L:Set(' ✅ : Valkyrie Helm')
-				Valkyrie_Helmet_S:Set(' ✅ : Valkyrie Helm')
-			end
-			if v["Name"] == 'Holy Crown' then
-				Holy_Crown_S:Set(' ✅ : Holy Crown')
-			end
-			if v["Name"] == 'Pale Scarf' then
-				Pale_Scarf_S:Set(' ✅ : Pale Scarf')
-			end
-			if v["Name"] == 'Dark Coat' then
-				Dark_Coat_S:Set(' ✅ : Dark Coat')
-			end
-			if v["Name"] == 'Swan Glasses' then
-				Swan_Glass_S:Set(' ✅ : Swan Glasses')
-			end
-			if v["Name"] == 'Zebra Cap' then
-				Zebra_Cap_S:Set(' ✅ : Zebra Cap')
-			end
-			if v["Name"] == 'Warrior Helmet' then
-				Warrior_Helmet_S:Set(' ✅ : Warrior Helmet')
-			end
-		end
-	end	
+				
 	end
 	-- Get Quest CDK
 	function GetQuest(vu)
@@ -6805,48 +6296,6 @@ if _G.Switch_Hub_Series_R then
 			end
 		end
 	})
-	spawn(function()
-		while wait(10) do
-			pcall(function()
-				-- Main
-				local ris_text = ''
-				if God_Human_H then
-					ris_text = ris_text..'👊'
-				end
-				if Cursed_Dual_Katana_H then
-					ris_text = ris_text..' ⚔️'
-				end
-				if Soul_Guitar_H then
-					ris_text = ris_text..' 🎸'
-				end 
-				if Shark_Anchor_H then
-					ris_text = ris_text..' ⚓'
-				end
-				if ris_text ~= '' then
-					if Mirror_Fractal_H then
-						ris_text = ris_text..' 🧩'
-					end
-					if Valkyrie_Helmet_H then
-						ris_text = ris_text..' 🎩'
-					end
-					if Quest_Race_V4_H then
-						ris_text = ris_text..' 🕹️'
-					end
-					game:GetService("CoreGui")["Switch Hub"].Text4.Fragments.Text  = ris_text
-				end
-				local ris_text = ''
-				if RGB_H then
-					ris_text = 'RGB Aura'
-				end
-				if Evo_Race_V3_H then
-					ris_text = ris_text..' | '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' V3'
-				elseif Evo_Race_V2_H then
-					ris_text = ris_text..' | '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' V2'
-				elseif Evo_Race_V1_H then
-					ris_text = ris_text..' | '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' V1'
-				else
-					ris_text = ris_text..' | '..tostring(game.Players.LocalPlayer.Data.Race.Value)
-				end
 				if tostring(game.Players.LocalPlayer.Data.DevilFruit.Value) ~= '' then
 					if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getAwakenedAbilities") == nil then
 						Name_Awaken = 'x'
@@ -7056,7 +6505,7 @@ if _G.Switch_Hub_Series_R then
 						Auto_Farm_Shark_Anchor = false
 						Shark_Anchor_H = true
 						List.Quest = false
-					end
+                               end
 				else
 					wait(2)
 				end
@@ -7068,7 +6517,7 @@ if _G.Switch_Hub_Series_R then
 			pcall(function()
 				if Auto_Farm_Kaitun then
 					if List.Raid then
-						Set_Status_X(' Status : Farm Raid')
+					
 						if game:GetService("Players").LocalPlayer.PlayerGui.Main.Timer.Visible == false then
 							if game.Players.LocalPlayer.Backpack:FindFirstChild('Special Microchip') or game.Players.LocalPlayer.Character:FindFirstChild('Special Microchip') then
 								if New_World then
@@ -7354,7 +6803,7 @@ if _G.Switch_Hub_Series_R then
                             end
                         else
                             if game:GetService("Workspace").Map:FindFirstChild("MysticIsland") then
-                                Status_T:Set('Status: Go to Mystic Island')
+                               
                                 if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
                                     game.Players.LocalPlayer.Character.Humanoid.Sit = false
                                     wait(0.5)
@@ -7423,7 +6872,7 @@ if _G.Switch_Hub_Series_R then
                                                         wait(0.5)
                                                         if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CheckTempleDoor") == true then
                                                             Pull_Lever_H = true
-                                                            Race_V4_S_Q:Set(' ✅ : Quest Pull Lever')
+                                                            
                                                         end
                                                     end
                                                 end
@@ -7438,7 +6887,7 @@ if _G.Switch_Hub_Series_R then
                             end
                         end
 					elseif Auto_Farm_Shark_Anchor and List.Quest and SelectBoss ~= 'rip_indra True Form' or Monster_Magnet_H and Auto_Farm_Shark_Anchor and List.Quest then
-						Set_Status_X(' Status : Farm Shark Anchor')
+						
 						if not kmldgf and Shark_Tooth_Necklace_H and not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild('Shark Tooth Necklace') then
 							local args = {
 								[1] = "LoadItem",
@@ -7834,7 +7283,7 @@ if _G.Switch_Hub_Series_R then
 							end
 						end
 					elseif List.Fruit and _G.Main['Bring Fruit'] and not Koko_Quest and Quest_Istand ~= 'God Dough Awaken' and not Not_Farm_Boss and not game:GetService("Workspace").Map:FindFirstChild('HellDimension') and not game:GetService("Workspace").Map:FindFirstChild('HeavenlyDimension') then
-						Set_Status_X(' Status : Bring Fruit')
+						
 						iojdijfgo = false
 						for i,v in pairs(game.Workspace:GetChildren()) do
 							if string.find(v.Name,'Fruit') and v:FindFirstChild('Handle') and not List.Raid then
@@ -7980,8 +7429,7 @@ if _G.Switch_Hub_Series_R then
 						end
 					elseif List.Boss and _G.Main['Kill Boss'] and not Koko_Quest and CDK_Q_S_C ~= 8 and Quest_Istand ~= 'God Dough Awaken' and CDK_Q_S_C ~= 9 and CDK_Q_S_C ~= 10 and not Not_Farm_Boss then
 						if Select_List_Boss ~= nil then
-							Set_Status_X(' Status : Farm Boss '..Select_List_Boss)
-						end
+                                            end
 						if Select_List_Boss == "rip_indra True Form" and not Unlock_Tushita_Quest and game.Players.LocalPlayer.Data.Level.Value >= 2000 then
 							local Q_Tushita = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TushitaProgress")
 							if Q_Tushita['OpenedDoor'] == false then
@@ -8034,13 +7482,13 @@ if _G.Switch_Hub_Series_R then
 							end
 						elseif game.Workspace.Enemies:FindFirstChild(Select_List_Boss) or game.ReplicatedStorage:FindFirstChild(Select_List_Boss) then
 							if Start_Quest_RGB then
-								Set_Status_X(' Status : RGB Quest')
+								
 								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("HornedMan","Bet")
 							else
 								CFrameQBoss_X = nil
 								CheckQuestBoss()
 								if CFrameQBoss_X ~= nil and not bit then
-									Set_Status_X(' Status : Get Quest Boss')
+									
 									repeat wait(.1)
 										TPX(CFrameQBoss_X)
 										if (CFrameQBoss_X.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 2 then
@@ -8048,7 +7496,7 @@ if _G.Switch_Hub_Series_R then
 											bit = true
 										end
 									until game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true and bit
-									Set_Status_X(' Status : Farm Boss')
+									
 								end
 							end
 							if game.Workspace.Enemies:FindFirstChild(Select_List_Boss) then
@@ -8068,7 +7516,7 @@ if _G.Switch_Hub_Series_R then
 										Start_Kill_Boss = false
 									end
 								end
-								Set_Status_X(' Status : Check Quest')
+								
                                 if Three_World then
 									if getgenv().Faster['CDK Super Fast'] and not Unlock_Tushita_Quest then
 										for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
@@ -8114,8 +7562,6 @@ if _G.Switch_Hub_Series_R then
 										Quest = 'Yama'
 										List.Quest = true
 									end
-									Elite_Hunter_S:Set(' Elite Hunter : '..tostring(game.ReplicatedStorage.Remotes.CommF_:InvokeServer("EliteHunter", "Progress")))
-								end
 								if New_World then
 									if Select_List_Boss == "Awakened Ice Admiral" then
 										if game:GetService("Workspace").Map.IceCastle.Hall.LibraryDoor:FindFirstChild('Keyhole') then
@@ -8126,7 +7572,7 @@ if _G.Switch_Hub_Series_R then
 												until (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(6377.12549, 296.634735, -6843.76025)).Magnitude <= 1 or not game:GetService("Workspace").Map.IceCastle.Hall.LibraryDoor:FindFirstChild('Keyhole')
 												wait(1)
 												if not game:GetService("Workspace").Map.IceCastle.Hall.LibraryDoor:FindFirstChild('Keyhole') then
-													Death_Step_S_Q:Set(' ✅ : Quest Death Step')
+													
 												end
 											end
 										end
@@ -8150,13 +7596,13 @@ if _G.Switch_Hub_Series_R then
 												EquipWeapon("Water Key")
 												wait(1)
 												game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate",true)
-												Sharkman_Karate_S_Q:Set(' ✅ : Quest Sharkman Karate')
+												
 												Sharkman_Karate_Q_C = true
 											end
 										end
 									end
 								end
-								Set_Status_X(' Status : Load Sword')
+								
 								GetLoadSword()
 							elseif game.ReplicatedStorage:FindFirstChild(Select_List_Boss) then
 								Start_Kill_Boss = true
@@ -8169,19 +7615,19 @@ if _G.Switch_Hub_Series_R then
 						end
                     
 					elseif List.Quest and Quest_Istand == 'God Dough Awaken' then
-						Set_Status_X(' Status : Quest Dough Awaken')
+						
 						if game.Players.LocalPlayer.Backpack:FindFirstChild('Red Key') or game.Players.LocalPlayer.Character:FindFirstChild('Red Key') then
-							Dough_Awaken_C_S:Set(' Dough Awaken : 4/4')
+							
 							EquipWeapon('Red Key')
 							TP(CFrame.new(-2681.51099, 64.3663483, -12852.7773))
 							if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakeScientist","Check") == true then
 								Quest_Istand = nil
 								List.Quest = false
-								Dough_Awaken_C_S:Set(' Dough Awaken : ✅')
+								
 								Quest_Dough_Awaken = true
 							end
 						elseif game.Workspace.Enemies:FindFirstChild('Dough King') or game.ReplicatedStorage:FindFirstChild('Dough King') then
-							Dough_Awaken_C_S:Set(' Dough Awaken : 3/4') 
+							 
 							if game.Workspace.Enemies:FindFirstChild('Dough King') then
 								for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
 									if v.Name == 'Dough King' and v.Humanoid.Health > 0 then
@@ -8193,7 +7639,7 @@ if _G.Switch_Hub_Series_R then
 											if v.Type == 'Material' then
 												if v.Name == 'Mirror Fractal' then
 													Mirror_Fractal_H = true
-													Mirror_Fractal_S:Set(' ✅ : Mirror Fractal')
+													
 												end
 											end
 										end
@@ -8203,7 +7649,7 @@ if _G.Switch_Hub_Series_R then
 								TP(game.ReplicatedStorage:FindFirstChild('Dough King').HumanoidRootPart.CFrame*CFrame.new(0,30,0))
 							end
 						elseif game.Players.LocalPlayer.Backpack:FindFirstChild("Sweet Chalice") or game.Players.LocalPlayer.Character:FindFirstChild("Sweet Chalice") then
-							Dough_Awaken_C_S:Set(' Dough Awaken : 2/4')
+							
 							Stop_Fast_Attack = false
 							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-2286.684326171875, 146.5656280517578, -12226.8818359375)).Magnitude >= 1800 then
 								repeat wait()
@@ -8225,9 +7671,9 @@ if _G.Switch_Hub_Series_R then
 									local Lp = tostring(string.match(tostring(game.ReplicatedStorage.Remotes.CommF_:InvokeServer("CakePrinceSpawner")), "%d+"))
 									if Lp == 'nil' or Lp == nil then
 										game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner",true)
-										Cake_Prince_S:Set(' Cake Prince : Boss Spawn')
+										
 									else
-										Cake_Prince_S:Set(' Cake Prince : '..Lp)
+										
 									end
 								elseif Monster == nil then
 									for i=1500,0,-300 do
@@ -8240,7 +7686,7 @@ if _G.Switch_Hub_Series_R then
 							end
 						elseif not game.Players.LocalPlayer.Backpack:FindFirstChild("Sweet Chalice") and not game.Players.LocalPlayer.Character:FindFirstChild("Sweet Chalice") then
 							if game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") or game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice") then
-								Dough_Awaken_C_S:Set(' Dough Awaken : 1/4')
+								
 								if CheckItem('Conjured Cocoa') >= 10 then
 									game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SweetChaliceNpc")
 								elseif CheckItem('Conjured Cocoa') < 10 then
@@ -8277,7 +7723,7 @@ if _G.Switch_Hub_Series_R then
 							end
 						end
 					elseif List.Quest and Quest ~= nil then
-						Set_Status_X(' Status : Quest '..Quest)
+						
 						if Quest == 'Saber' then
 							local Q_Saber = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ProQuestProgress")
 							if Q_Saber["UsedTorch"] == false then
@@ -8375,13 +7821,7 @@ if _G.Switch_Hub_Series_R then
                                     wait(1)
                                     if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Alchemist","3") == -2 then
                                         Evo_Race_V1_H = true
-                                        if Evo_Race_V3_H then
-                                            Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 3')
-                                        elseif Evo_Race_V2_H then
-                                            Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 2')
-                                        elseif Evo_Race_V1_H then
-                                            Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 1')
-                                        end
+                                       
 										List.Quest = false
 										if _G.Quest['Evo Race V2'] and not Evo_Race_V2_H and game.Players.LocalPlayer.Data.Level.Value >= 1500 and New_World then
 											if Don_Swan_H and game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Wenlocktoad","1") == nil then
@@ -8410,13 +7850,7 @@ if _G.Switch_Hub_Series_R then
 									until not v.Parent or v.Humanoid.Health <= 0 or not Auto_Farm_Kaitun
 									if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Wenlocktoad","1") ~= nil then
 										Evo_Race_V2_H = true
-										if Evo_Race_V3_H then
-											Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 3')
-										elseif Evo_Race_V2_H then
-											Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 2')
-										elseif Evo_Race_V1_H then
-											Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 1')
-										end
+										
 										List.Quest = false
 										Not_Farm_Boss = false
 										if _G.Quest['Evo Race V3'] and not Evo_Race_V3_H and game.Players.LocalPlayer.Data.Level.Value >= 1500 and New_World and not checkput then
@@ -8455,13 +7889,7 @@ if _G.Switch_Hub_Series_R then
 										wait(1)
 										if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Wenlocktoad","3") == -2 then
 											Evo_Race_V3_H = true
-											if Evo_Race_V3_H then
-												Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 3')
-											elseif Evo_Race_V2_H then
-												Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 2')
-											elseif Evo_Race_V1_H then
-												Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 1')
-											end
+										
 											Not_Farm_Boss = false
 											List.Quest = false
 										end
@@ -8479,12 +7907,7 @@ if _G.Switch_Hub_Series_R then
 									if Kill_Jeremy and Kill_Diamond and Kill_Fajita then
 										if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Wenlocktoad","3") == -2 then
 											Evo_Race_V3_H = true
-											if Evo_Race_V3_H then
-												Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 3')
-											elseif Evo_Race_V2_H then
-												Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 2')
-											elseif Evo_Race_V1_H then
-												Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 1')
+						
 											end
 											Not_Farm_Boss = false
 											List.Quest = false
@@ -8672,7 +8095,7 @@ if _G.Switch_Hub_Series_R then
                                         if v:FindFirstChild('Data') and v.Name ~= 'Bitx' and v.Data.Race.Value == 'Skypiea' and v.Name ~= tostring(game.Players.LocalPlayer.Name) then
                                             select_attack = v.Name
 											v.Name = 'Bitx'
-											Set_Status_X(' Status : Kill '..tostring(v.Name))
+											
                                         end
                                     end
 									if select_attack == nil then
@@ -8721,13 +8144,7 @@ if _G.Switch_Hub_Series_R then
 										Evo_Race_V3_H = true 
 										Lsit.Quest = false
 										Quest = nil
-										if Evo_Race_V3_H then
-                                            Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 3')
-                                        elseif Evo_Race_V2_H then
-                                            Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 2')
-                                        elseif Evo_Race_V1_H then
-                                            Race_S:Set(' Race : '..tostring(game.Players.LocalPlayer.Data.Race.Value)..' : 1')
-                                        end
+										
 									end
                                     TP(CFrame.new(638.43811, 71.769989, 918.282898))
                                     if game:GetService("Players").LocalPlayer.PlayerGui.Main.PvpDisabled.Visible == true then
@@ -8881,7 +8298,7 @@ if _G.Switch_Hub_Series_R then
 								game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BartiloQuestProgress","DidPlates")
 							elseif Q_Bar['KilledBandits'] == true and Q_Bar['DidPlates'] == true then
 								if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BartiloQuestProgress","Bartilo") == 3 then
-									Bartlio_S:Set(' ✅ : Quest Bartlio')
+									
 								end
 								Bartlio_H = true
 								List.Quest = false
@@ -8925,7 +8342,7 @@ if _G.Switch_Hub_Series_R then
 								Don_Swan_H = true
 							end
 							if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TalkTrevor","1") == 0 then
-								Don_Swan_S:Set(' ✅ : Quest Don Swan')
+							
 							end
 							if not bit then
 								List.Quest = false
@@ -9154,12 +8571,12 @@ if _G.Switch_Hub_Series_R then
 										if v["Name"] == 'Yama' then
 											List.Quest = false
 											Yama_H = true
-											Yama_S:Set(" ✅ : Yama")
+											
 										end
 									end
 									if game.Players.LocalPlayer.Backpack:FindFirstChild('Yama') or game.Players.LocalPlayer.Character:FindFirstChild('Yama') then
 										Yama_H = true
-										Yama_S:Set(" ✅ : Yama")
+										
 										List.Quest = false
 									end
 								end
@@ -9181,7 +8598,7 @@ if _G.Switch_Hub_Series_R then
 							local CFrame_Monster_1 = nil
 							local CFrame_Monster_2 = nil
 							if CheckItem_X('Fish Tail') < 20 then
-								God_Human_C_S:Set(' Godhuman : 2/5')
+								
 								Select_Monster_1 = "Fishman Warrior" 
 								Select_Monster_2 = "Fishman Commando"
 								CFrame_Monster_1 = CFrame.new(60946.6094, 65.6735229, 1525.91687)
@@ -9192,7 +8609,7 @@ if _G.Switch_Hub_Series_R then
 									wait(50)
 								end
 							elseif CheckItem_X('Magma Ore') < 20 then
-								God_Human_C_S:Set(' Godhuman : 3/5')
+								
 								Select_Monster_1 = "Magma Ninja"
 								Select_Monster_2 = "Lava Pirate"
 								CFrame_Monster_1 = CFrame.new(-5466.06445, 77.6952019, -5837.42822)
@@ -9203,7 +8620,7 @@ if _G.Switch_Hub_Series_R then
 									wait(50)
 								end
 							elseif CheckItem_X('Mystic Droplet') < 10 then
-								God_Human_C_S:Set(' Godhuman : 4/5')
+								
 								Select_Monster_1 = "Sea Soldier"
 								Select_Monster_2 = "Water Fighter"
 								CFrame_Monster_1 = CFrame.new(-3115.78223, 63.8785706, -9808.38574)
@@ -9214,7 +8631,7 @@ if _G.Switch_Hub_Series_R then
 									wait(50)
 								end
 							elseif CheckItem_X('Dragon Scale') < 10 then
-								God_Human_C_S:Set(' Godhuman : 5/5')
+								
 								Select_Monster_1 = "Dragon Crew Warrior"
 								Select_Monster_2 = "Dragon Crew Archer"
 								CFrame_Monster_1 = CFrame.new(6241.9951171875, 51.522083282471, -1243.9771728516)
@@ -9312,7 +8729,7 @@ if _G.Switch_Hub_Series_R then
 							if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CDKQuest","OpenDoor") == 'opened' then
 								local CheckQuest = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CDKQuest","Progress")
 								if CheckQuest['Good'] == 0 or CheckQuest['Good'] == -3 then
-									Cursed_Dual_Katana_Q_S:Set(' Cursed Dual Katana : 3/10')
+									
 									CDK_Q_S_C = 3
 									if CheckQuest['Good'] == 0 then
 										GetQuest('Good')
@@ -9355,7 +8772,7 @@ if _G.Switch_Hub_Series_R then
 										Q_Boat_3 = false
 									end
 								elseif CheckQuest['Evil'] == 0 or CheckQuest['Evil'] == -3 then
-									Cursed_Dual_Katana_Q_S:Set(' Cursed Dual Katana : 4/10')
+									
 									CDK_Q_S_C = 4
 									if CheckQuest['Evil'] == 0 then
 										GetQuest('Evil')
@@ -9371,7 +8788,7 @@ if _G.Switch_Hub_Series_R then
 									end
 								elseif CheckQuest['Evil'] == 1 or CheckQuest['Evil'] == -4 then
 									Stop_Fast_Attack = false
-									Cursed_Dual_Katana_Q_S:Set(' Cursed Dual Katana : 5/10')
+									
 									CDK_Q_S_C = 5
 									if CheckQuest['Evil'] == 1 then
 										GetQuest('Evil')
@@ -9407,7 +8824,7 @@ if _G.Switch_Hub_Series_R then
 										end
 									end
 								elseif CheckQuest['Good'] == 1 or CheckQuest['Good'] == -4 then
-									Cursed_Dual_Katana_Q_S:Set(' Cursed Dual Katana : 6/10')
+									
 									CDK_Q_S_C = 6
 									if CheckQuest['Good'] == 1 then
 										GetQuest('Good')
@@ -9426,7 +8843,7 @@ if _G.Switch_Hub_Series_R then
 										end
 									end
 								elseif CheckQuest['Good'] == 2 or CheckQuest['Good'] == -5 then
-									Cursed_Dual_Katana_Q_S:Set(' Cursed Dual Katana : 7/10')
+									
 									CDK_Q_S_C = 7
 									Cake_Quest = true
 									if CheckQuest['Good'] == 2 then
@@ -9492,7 +8909,7 @@ if _G.Switch_Hub_Series_R then
 										end
 									end
 								elseif CheckQuest['Evil'] == 2 or CheckQuest['Evil'] == -5 then
-									Cursed_Dual_Katana_Q_S:Set(' Cursed Dual Katana : 8/10')
+									
 									CDK_Q_S_C = 8
 									if CheckQuest['Evil'] == 2 then
 										GetQuest('Evil')
@@ -9552,7 +8969,7 @@ if _G.Switch_Hub_Series_R then
 												wait(1)
 												if not Dragon_Talon_Q then
 													if game.Players.LocalPlayer.Backpack:FindFirstChild("Fire Essence") or game.Players.LocalPlayer.Character:FindFirstChild("Fire Essence") then
-														Set_Status_X(' Status : Use Fire Essence')
+														
 														repeat 
 															EquipWeapon("Fire Essence")
 															wait(.5)
@@ -9560,13 +8977,13 @@ if _G.Switch_Hub_Series_R then
 															game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyDragonTalon")
 														until not game.Players.LocalPlayer.Backpack:FindFirstChild("Fire Essence") and not game.Players.LocalPlayer.Character:FindFirstChild("Fire Essence")
 														if not string.find(tostring(game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyDragonTalon",true)),'heart') then
-															Dragon_Talon_S_Q:Set(' ✅ : Quest Dragon Talon')
+															
 															Dragon_Talon_Q = true
 														end
 													end
 												end
 												if game.Players.LocalPlayer.Backpack:FindFirstChild("Hallow Essence") or game.Players.LocalPlayer.Character:FindFirstChild("Hallow Essence") then
-													Set_Status_X(' Status : Use Hallow Essence')
+													
 													repeat wait(1)
 														EquipWeapon("Hallow Essence")
 														TP(CFrame.new(-8932.86, 143.258, 6063.31))
@@ -9656,7 +9073,7 @@ if _G.Switch_Hub_Series_R then
 												end
 												if not List.Raid then
 													if List.Fruit and _G.Main['Bring Fruit'] and not Koko_Quest and Quest_Istand ~= 'God Dough Awaken' and not Not_Farm_Boss and not game:GetService("Workspace").Map:FindFirstChild('HellDimension') and not game:GetService("Workspace").Map:FindFirstChild('HeavenlyDimension') then
-														Set_Status_X(' Status : Bring Fruit')
+														
 														iojdijfgo = false
 														for i,v in pairs(game.Workspace:GetChildren()) do
 															if string.find(v.Name,'Fruit') and v:FindFirstChild('Handle') and not List.Raid then
@@ -9847,7 +9264,7 @@ if _G.Switch_Hub_Series_R then
 									wait(1)
 									click(game:GetService("Players").LocalPlayer.PlayerGui.Main.Dialogue)
 								elseif CheckQuest['Good'] == 4 and CheckQuest['Evil'] == 4 and game:GetService("Workspace").Map.Turtle.Cursed.BossDoor.Position.Y > 584 then
-									Cursed_Dual_Katana_Q_S:Set(' Cursed Dual Katana : 9/10')
+									
 									EquipWeapon(Weapon)
 									repeat wait(.1)
 										TP(CFrame.new(-12359.1719, 603.319702, -6550.59717, 0.481593847, 0, -0.87639451, 0, 1, 0, 0.87639451, 0, 0.481593847))
@@ -9874,7 +9291,7 @@ if _G.Switch_Hub_Series_R then
 											end
 										end
 									end
-									Cursed_Dual_Katana_Q_S:Set(' Cursed Dual Katana : 10/10')
+									
 									CDK_Q_S_C = 10
 									if (Vector3.new(-12297.5605, 598.726013, -6532.96436)-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 100 then
 										repeat wait()
@@ -9919,7 +9336,7 @@ if _G.Switch_Hub_Series_R then
 						elseif Quest == 'Soul Guitar' then
 							if CheckItem('Bones') < 500 then
 								if Three_World then
-									Soul_Guitar_C_S:Set(' Soul Guitar : 2/5')
+									
 									Stop_Fast_Attack = false
 									if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-9712.03125, 204.69589233398, 6193.322265625)).Magnitude >= 3000 then
 										repeat wait()
@@ -9955,7 +9372,7 @@ if _G.Switch_Hub_Series_R then
 								end
 							elseif CheckItem('Ectoplasm') < 250 then
 								if New_World then
-									Soul_Guitar_C_S:Set(' Soul Guitar : 2/5')
+									
 									Stop_Fast_Attack = false
 									if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(921.30249023438, 125.400390625, 32937.34375)).Magnitude >= 3000 then
 										repeat wait()
@@ -9995,7 +9412,7 @@ if _G.Switch_Hub_Series_R then
 								wait(50)
 							else
 								if tostring(game:GetService("Workspace").Map["Haunted Castle"].SwampWater.BrickColor) == 'Maroon' then
-									Soul_Guitar_C_S:Set(' Soul Guitar : 4/5')
+									
 									if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GuitarPuzzleProgress","Check") ~= nil and game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GuitarPuzzleProgress","Check")['Swamp'] == false then
 										repeat wait()
 											TPX(CFrame.new(-10147.779296875, 138.62667846679688, 5939.56005859375))
@@ -10022,7 +9439,7 @@ if _G.Switch_Hub_Series_R then
 										end
 									end
 								elseif game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GuitarPuzzleProgress","Check") ~= nil then
-									Soul_Guitar_C_S:Set(' Soul Guitar : 5/5')
+									
 									local Q_S_G = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GuitarPuzzleProgress","Check")
 									if Q_S_G['Trophies'] and Q_S_G['Ghost'] and Q_S_G['Gravestones'] and Q_S_G['Swamp'] and Q_S_G['Pipes'] then
 										Quest_Soul_Guitar = true
@@ -10046,13 +9463,13 @@ if _G.Switch_Hub_Series_R then
 										end
 										wait(1)
 										AFK_Not_Check = false
-										Soul_Guitar_C_S:Set(' Soul Guitar : ✅')
+										
 										Quest_Soul_Guitar = true
 										List.Quest = false
 									end
 								elseif tostring(game:GetService("Workspace").Map["Haunted Castle"].SwampWater.BrickColor) ~= 'Maroon' then
 									AFK_Not_Check = true
-									Soul_Guitar_C_S:Set(' Soul Guitar : 3/5')
+								
 									if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("gravestoneEvent",2) == true then
 										game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("gravestoneEvent",2,true)
 									else
@@ -10072,7 +9489,7 @@ if _G.Switch_Hub_Series_R then
 							end
 						end
 					elseif Three_World and _G.Quest['RGB'] and Check_RGB_Spawn == nil and not RGB_H then
-						Set_Status_X(' Status : Check RGB Quest')
+						
 						if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("HornedMan","Bet") == nil then
 							if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true then
 								local name_q = game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text
@@ -10100,12 +9517,12 @@ if _G.Switch_Hub_Series_R then
 									elseif string.find(name_q,'Beautiful Pirate') then
 										Number = 5
 									end
-									RGB_S_Q:Set(' RGB : '..tostring(Number).."/5 "..Check_RGB_Spawn)
+									
 								end
 							end
 						elseif game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("HornedMan","Bet") == 1 then
 							RGB_H = true
-							RGB_S_Q:Set(' RGB : ✅')
+							
 							Check_RGB_Spawn = nil
 						end
 					elseif List.HakiJump then
@@ -10245,7 +9662,7 @@ if _G.Switch_Hub_Series_R then
 						end
 						-- Eat Fruit
 						if game.Players.LocalPlayer.Data.Level.Value >= 1100 and game.Players.LocalPlayer.Data.DevilFruit.Value == '' then
-							Set_Status_X(' Status : Check Eat Fruit')
+							
 							Eat_Fruit = nil
 							Fruit_Check = nil
 							local fruitx = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryFruits")
@@ -10280,7 +9697,7 @@ if _G.Switch_Hub_Series_R then
 						-- Don Swan
 						if New_World then
 							if game.Players.LocalPlayer.Data.Level.Value >= 1150 and not Don_Swan_H then -- Set Value
-								Set_Status_X(' Status : Check Don Swan')
+								
 								if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TalkTrevor","1") == 0 then
 									Don_Swan_H = true
 								else
@@ -10294,9 +9711,9 @@ if _G.Switch_Hub_Series_R then
 								end
 							end
 						end
-						Set_Status_X(' Status : Sucess Random Fruit')
+						
 					elseif Quest_Electric_Claw and not Electric_Claw_Q_C then
-						Set_Status_X(' Status : Electric Claw Quest')
+						
 						if game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyElectricClaw", true) == 'Nah.' or game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyElectricClaw", true) == 4 then
 							game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyElectricClaw", "Start")
 							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-12548, 337, -7481)
@@ -10304,7 +9721,7 @@ if _G.Switch_Hub_Series_R then
 							Electric_Claw_Q_C = true
 						end
 					elseif Check_Time_Reaper then
-						Set_Status_X(' Status : Check Time Reaper')
+						
 						repeat wait(.2)
 							TPX(CFrame.new(-8652.6416015625, 141.10939025878906, 6168.810546875))
 						until (Vector3.new(-8652.6416015625, 141.10939025878906, 6168.810546875)-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 3
@@ -10323,14 +9740,14 @@ if _G.Switch_Hub_Series_R then
 											game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyDragonTalon")
 										until not game.Players.LocalPlayer.Backpack:FindFirstChild("Fire Essence") and not game.Players.LocalPlayer.Character:FindFirstChild("Fire Essence")
 										if not string.find(tostring(game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyDragonTalon",true)),'heart') then
-											Dragon_Talon_S_Q:Set(' ✅ : Quest Dragon Talon')
+											
 											Dragon_Talon_Q = true
 										end
 									end
 								end
 								for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
 									if v.Name == "Fire Essence" then
-										Set_Status_X(' Status : Use Fire Essence')
+										
 										repeat 
 											EquipWeapon("Fire Essence")
 											wait(.5)
@@ -10338,7 +9755,7 @@ if _G.Switch_Hub_Series_R then
 											game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyDragonTalon")
 										until not game.Players.LocalPlayer.Backpack:FindFirstChild("Fire Essence") and not game.Players.LocalPlayer.Character:FindFirstChild("Fire Essence")
 										if not string.find(tostring(game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyDragonTalon",true)),'heart') then
-											Dragon_Talon_S_Q:Set(' ✅ : Quest Dragon Talon')
+											
 											Dragon_Talon_Q = true
 										end
 									end
@@ -10346,7 +9763,7 @@ if _G.Switch_Hub_Series_R then
 							end
 							if not Hallow_Scryte_H then
 								if game.Players.LocalPlayer.Backpack:FindFirstChild("Hallow Essence") or game.Players.LocalPlayer.Character:FindFirstChild("Hallow Essence") then
-									Set_Status_X(' Status : Use Hallow Essence')
+									
 									repeat wait(1)
 										EquipWeapon("Hallow Essence")
 										TP(CFrame.new(-8932.86, 143.258, 6063.31))
@@ -10372,7 +9789,7 @@ if _G.Switch_Hub_Series_R then
 										if v.Type == "Sword" then
 											if v.Name == 'Hallow Scythe' then
 												Hallow_Scryte_H = true
-												Hallow_Scythe_S:Set(' ✅ : Hallow Scythe'..' : '..tostring(v.Mastery))
+												
 											end
 										end
 									end
@@ -10480,20 +9897,20 @@ if _G.Switch_Hub_Series_R then
 							if New_World then
 								if game:GetService("Workspace").Map.IceCastle.Hall.LibraryDoor:FindFirstChild('Keyhole') then
 									if game.Players.LocalPlayer.Backpack:FindFirstChild("Library Key") or game.Players.LocalPlayer.Character:FindFirstChild("Library Key") then
-										Set_Status_X(' Status : Use Library Key')
+										
 										repeat wait(.1)
 											EquipWeapon("Library Key")
 											TP(CFrame.new(6377.12549, 296.634735, -6843.76025, -0.860993743, 1.17677516e-07, -0.508615494, 1.31121894e-07, 1, 9.40274347e-09, 0.508615494, -5.8594928e-08, -0.860993743))
 										until (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(6377.12549, 296.634735, -6843.76025)).Magnitude <= 1 or not game:GetService("Workspace").Map.IceCastle.Hall.LibraryDoor:FindFirstChild('Keyhole')
 										wait(1)
 										if not game:GetService("Workspace").Map.IceCastle.Hall.LibraryDoor:FindFirstChild('Keyhole') then
-											Death_Step_S_Q:Set(' ✅ : Quest Death Step')
+											
 										end
 									end
 								end
 								if not Rengoku_H then
 									if game.Players.LocalPlayer.Backpack:FindFirstChild("Hidden Key") or game.Players.LocalPlayer.Character:FindFirstChild("Hidden Key") then
-										Set_Status_X(' Status : Use Hidden Key')
+										
 										repeat wait(.3)
 											EquipWeapon("Hidden Key")
 											TP(CFrame.new(6572.29248, 295.712677, -6966.09961, 0.803500533, -3.27515153e-08, 0.595304072, 3.97485422e-08, 1, 1.36659384e-09, -0.595304072, 2.25644108e-08, 0.803500533))
@@ -10508,7 +9925,7 @@ if _G.Switch_Hub_Series_R then
 											EquipWeapon("Water Key")
 											wait(1)
 											game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate",true)
-											Sharkman_Karate_S_Q:Set(' ✅ : Quest Sharkman Karate')
+											
 											Sharkman_Karate_Q_C = true
 										end
 									end
@@ -10523,7 +9940,7 @@ if _G.Switch_Hub_Series_R then
 								end
 							end 
 							if Check_Bone and Three_World then
-								Set_Status_X(' Status : Check Bone')
+								
 								if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones","Check") ~= 0 then
 									repeat wait(.2)
 										game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones","Check")
@@ -10532,7 +9949,7 @@ if _G.Switch_Hub_Series_R then
 									wait(0.5)
 									if not Dragon_Talon_Q then
 										if game.Players.LocalPlayer.Backpack:FindFirstChild("Fire Essence") or game.Players.LocalPlayer.Character:FindFirstChild("Fire Essence") then
-											Set_Status_X(' Status : Use Fire Essence')
+											
 											repeat 
 												EquipWeapon("Fire Essence")
 												wait(.5)
@@ -10540,7 +9957,7 @@ if _G.Switch_Hub_Series_R then
 												game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyDragonTalon")
 											until not game.Players.LocalPlayer.Backpack:FindFirstChild("Fire Essence") and not game.Players.LocalPlayer.Character:FindFirstChild("Fire Essence")
 											if not string.find(tostring(game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BuyDragonTalon",true)),'heart') then
-												Dragon_Talon_S_Q:Set(' ✅ : Quest Dragon Talon')
+												
 												Dragon_Talon_Q = true
 											end
 										end
@@ -10885,7 +10302,7 @@ if _G.Switch_Hub_Series_R then
 									Start_Farm_Mastery_Fruit = false
 								end)
 							elseif Start_Farm_Mastery_Gun and Weapon_Gun ~= nil then
-								Set_Status_X(' Status : Farm Mastery Gun')
+								
 								Start_Farm_Gun = true
 								xp = CFrame.new(386.14862060546875, 24.793800354003906, -12579.6962890625)
 								if Three_World then
@@ -10955,7 +10372,7 @@ if _G.Switch_Hub_Series_R then
 									end
 								end
 							elseif Farm_Cake then
-								Set_Status_X(' Status : Farm Cake Prince')
+								
 								pcall(function()
 									Start_Farm_Cake = true 
 									if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-2286.684326171875, 146.5656280517578, -12226.8818359375)).Magnitude >= 2000 then
@@ -10988,13 +10405,13 @@ if _G.Switch_Hub_Series_R then
 											game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner",true)
 											Cake_Prince_S:Set(' Cake Prince : Boss Spawn')
 										else
-											Cake_Prince_S:Set(' Cake Prince : '..Lp)
+											
 										end
 									end
 									Start_Farm_Cake = false
 								end)
 							elseif Farm_Mastery then
-								Set_Status_X(' Status : Farm Mastery')
+								
 								pcall(function()
 									Start_Farm_Mastery = true 
 									xp = CFrame.new(-8817.880859375, 191.16761779785, 6298.6557617188)
@@ -11052,7 +10469,7 @@ if _G.Switch_Hub_Series_R then
 									Start_Farm_Mastery = false
 								end)
 							else
-								Set_Status_X(' Status : Farm Level')
+								
 								if Old_World then
 									if game.Players.LocalPlayer.Data.Level.Value < 300 then
 										Fast_Down = true
@@ -11065,7 +10482,7 @@ if _G.Switch_Hub_Series_R then
 						end
 					end
 				else
-					Set_Status_X(' Status : Off')
+					
 				end
 			end)
 		end
@@ -11089,13 +10506,13 @@ if _G.Switch_Hub_Series_R then
 	for i,v in pairs(game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer("getColors")) do
 		if v.HiddenName == 'Pure Red' and v.Unlocked == true then
 			Pure_Red_H = true
-			--Pure_Red_S:Set(' 🔴 Haki Pure Red : ✅')
+			
 		elseif v.HiddenName == 'Snow White' and v.Unlocked == true then
 			Snow_White = true
-			--Snow_White_S:Set(' ⚪ Haki Snow White : ✅')
+			
 		elseif v.HiddenName == 'Winter Sky' and v.Unlocked == true then
 			Winter_Sky = true
-			--Winter_Sky_S:Set(' ⭕ Haki Winter Sky : ✅')
+			
 		
 		end
 	end
@@ -11160,13 +10577,13 @@ if _G.Switch_Hub_Series_R then
 						for i,v in pairs(game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer("getColors")) do
 							if v.HiddenName == 'Pure Red' and v.Unlocked == true then
 								Pure_Red_H = true
-								Pure_Red_S:Set(' 🔴 Haki Pure Red : ✅')
+								
 							elseif v.HiddenName == 'Snow White' and v.Unlocked == true then
 								Snow_White = true
-								Snow_White_S:Set(' ⚪ Haki Snow White : ✅')
+								
 							elseif v.HiddenName == 'Winter Sky' and v.Unlocked == true then
 								Winter_Sky = true
-								Winter_Sky_S:Set(' ⭕ Haki Winter Sky : ✅')
+								
 							end
 						end
 						if Pure_Red_H then
@@ -11196,23 +10613,23 @@ if _G.Switch_Hub_Series_R then
 		local Mystic = nil
 		local FullMoon_X = nil
 		if MysticIsland_S then
-			Mystic = "✅ Mystic Island spawn.🌴"  
+			Mystic = ""  
 		else
-			Mystic = "❌ Mystic Island not spawn."
+			Mystic = ""
 		end
 	
 		if game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149431" then
-			FullMoon_X = tostring("5/5".." | ".."Full Moon 🌕 | "..tostring(game:GetService("Lighting").TimeOfDay))
+			FullMoon_X ="..tostring(game:GetService("Lighting").TimeOfDay))
 		elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149052" then
-			FullMoon_X = tostring("4/5".." | ".."75% | "..tostring(game:GetService("Lighting").TimeOfDay))
+			FullMoon_X = | "..tostring(game:GetService("Lighting").TimeOfDay))
 		elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709143733" then
-			FullMoon_X = tostring("3/5".." | ".."50% | "..tostring(game:GetService("Lighting").TimeOfDay))
+			FullMoon_X =  "..tostring(game:GetService("Lighting").TimeOfDay))
 		elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709150401" then
-			FullMoon_X = tostring("2/5".." | ".."25% | "..tostring(game:GetService("Lighting").TimeOfDay))
+			FullMoon_X = ..tostring(game:GetService("Lighting").TimeOfDay))
 		elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149680" then
-			FullMoon_X = tostring("1/5".." | ".."15% | "..tostring(game:GetService("Lighting").TimeOfDay))
+			FullMoon_X =  "..tostring(game:GetService("Lighting").TimeOfDay))
 		else
-			FullMoon_X = tostring("0/5".." | ".."0% | "..tostring(game:GetService("Lighting").TimeOfDay))
+			FullMoon_X =  "..tostring(game:GetService("Lighting").TimeOfDay))
 		end
 		local get_player_x = {}
 		for i,v in pairs(game.Players:GetChildren()) do
