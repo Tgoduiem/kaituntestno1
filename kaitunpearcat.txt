@@ -120,3 +120,126 @@ function RedeemAllCodesX2()
                game:GetService("ReplicatedStorage").Remotes.Redeem:InvokeServer(v)
             end
          end
+--Melee
+function vcl(a, b) 
+  if a: FindFirstChild"Level" then 
+    return a.Level.Value 
+   else 
+     return b or 0 
+  end 
+end 
+ 
+         function checkitem(sw)
+            local a = game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(sw)
+            local b =  game.Players.LocalPlayer.Character:FindFirstChild(sw)
+            if ( a and a.Name == sw)  then 
+              
+              return {Mastery = vcl(a , 0)} 
+            end 
+            
+            if ( b and b.Name == sw)  then
+              return {Mastery = vcl(b , 0)} 
+            end 
+            
+            for k, v in pairs(inv) do
+               if v.Name == sw then
+                  return v
+               end
+            end
+            return false
+         end
+
+ 
+         function checkitem2(sw)
+            local a = game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(sw)
+            local b =  game.Players.LocalPlayer.Character:FindFirstChild(sw)
+            if ( a and a.Name == sw)  then 
+              
+              return {Mastery = vcl(a , 0)} 
+            end 
+            
+            if ( b and b.Name == sw)  then 
+              return {Mastery = vcl(b , 0)} 
+            end 
+            
+            return false
+         end
+
+
+         function NameMelee(a)
+            a = a or false
+            for r, v in next, game:GetService("Players").LocalPlayer.Backpack:GetChildren() do
+               if v:IsA("Tool") and v.ToolTip == "Melee" then
+                  if a then
+                     return v
+                  else
+                     return v.Name
+                  end
+               end
+            end
+            for r, v in next, game:GetService("Players").LocalPlayer.Character:GetChildren() do
+               if v:IsA("Tool") and v.ToolTip == "Melee" then
+                  if a then
+                     return v
+                  else
+                     return v.Name
+                  end
+               end
+            end
+         end
+function checkm2(melee)
+           if melee == "DragonClaw" then
+             return game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BlackbeardReward", melee, "1")
+           end 
+           return game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Buy" .. melee, true) 
+         end 
+         
+         function checkMelee(melee)
+
+
+            if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Buy" .. melee, true) == 1 or game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BlackbeardReward", melee, "1") == 1 then
+               return true
+            end
+if NameMelee() == meleetable4[melee] then return true end
+            return false;
+         end
+-- World 
+	 local placeId = game.PlaceId
+	 if placeId == 2753915549 then
+	 Main = true
+	 elseif placeId == 4442272183 then
+	 Dressrosa = true
+	 elseif placeId == 7449423635 then
+	 Zou = true
+	 end
+-- Time
+spawn(function()
+		while wait(1) do
+			pcall(function()
+				local scripttime=game.Workspace.DistributedGameTime
+				local seconds = scripttime%60
+				minutes = math.floor(scripttime/60%60)
+				hours = math.floor(scripttime/3600)
+				local tempo = string.format("%.0f Hr(s), %.0f Min(s), %.0f Sec(s)", hours ,minutes, seconds)
+         end
+     end
+end
+-- Pos
+function TP(Pos)
+		local xps = game.Players.LocalPlayer and game.Players.LocalPlayer.Character.HumanoidRootPart and  game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+		if xps then
+			local Distance = (Pos.Position - xps).Magnitude
+			pcall(function()
+				Tween = game:GetService("TweenService"):Create(
+					game.Players.LocalPlayer.Character.HumanoidRootPart,
+					TweenInfo.new(Distance/300, Enum.EasingStyle.Linear),
+					{CFrame = Pos}
+				)
+				Tween:Play()
+				if Distance <= 300 then
+					Tween:Cancel()
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Pos
+				end
+			end)
+		end
+	end
