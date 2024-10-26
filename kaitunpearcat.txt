@@ -1,3 +1,7 @@
+
+-- DO NOT REMOVE ANY KEY BE ABOVE THIS CONFIG IF YOU DON'T TOMORROW YOU WILL RECEIVE IT (gg trans) / KO ĐC XOÁ BẤT KỲ KEY NÀO TRONG CÁI CONFIG NÀY NẾU KO NGÀY MAI KHI CHECK ACC KHÓC K KỊP =)))
+-- TYPE CỦA KEY NẾU THAY THÌ PHẢI THAY ĐÚNG TYPE (BOOL = BOOL) THAY BẰNG CÁI KHÁC LÀ BÚ LOL NHÉ EM
+-- vd: ["V2 Race"] = true ---sửa--> ["V2 Race"] = "false" -> bú cặc
 repeat wait() until game: IsLoaded () 
 
 
@@ -68,8 +72,12 @@ repeat wait() until game: IsLoaded ()
       {
          ["Webhook"] =
          { -- Discord Webhook
-            ["Url"] = ", -- Webhook Của Mày
+            ["Url"] = "https://discord.com/api/webhooks/1148666615026688071/fHjKtl_2r7KXDPTd3k9pCTJ4fSZZYWxcByXYeMNt8iu4yFaumkO-kEp8qdquOQ5Ux2Tq", -- Webhook Của Mày
             ["Enable"] = true, -- Bật or Tẵt
+            ["Image"] = {"https://raw.githubusercontent.com/zaizooo/ayumi-cdn/main/1c914d7c0f43a92c48504d9a612a8d5d.gif",
+              "https://raw.githubusercontent.com/zaizooo/ayumi-cdn/main/departing-07-EXPORT.gif", 
+              "https://raw.githubusercontent.com/zaizooo/ayumi-cdn/main/c41a75767e2741bb005f96b4b6895898%20(1).gif",
+              "https://github.com/zaizooo/Nexus-cdn/blob/main/7a1451c07ba25f8c2f1ae81f8da4ad9f.gif?raw=true", 
               },
             ["Send While"] =
             { --Gửi Những J Vào Webhook
