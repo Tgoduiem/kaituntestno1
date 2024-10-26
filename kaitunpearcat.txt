@@ -213,15 +213,4 @@ if NameMelee() == meleetable4[melee] then return true end
 	 Zou = true
 	 end
 -- Time
-spawn(function()
-		while wait(1) do
-			pcall(function()
-				local scripttime=game.Workspace.DistributedGameTime
-				local seconds = scripttime%60
-				minutes = math.floor(scripttime/60%60)
-				hours = math.floor(scripttime/3600)
-				local tempo = string.format("%.0f Hr(s), %.0f Min(s), %.0f Sec(s)", hours ,minutes, seconds)
-         end
-     end
-end
 -- Pos
