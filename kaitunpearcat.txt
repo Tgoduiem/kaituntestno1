@@ -121,6 +121,15 @@ function RedeemAllCodesX2()
             end
          end
 --Melee
+function EquipWeapon(ToolSe)
+		pcall(function()
+			if game.Players.LocalPlayer.Backpack:FindFirstChild(ToolSe) and game.Players.LocalPlayer.Character:FindFirstChild('Humanoid') then
+				local tool = game.Players.LocalPlayer.Backpack:FindFirstChild(ToolSe)
+				wait()
+				game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
+			end
+		end)
+	end
 -- World 
 	 local placeId = game.PlaceId
 	 if placeId == 2753915549 then
@@ -132,3 +141,4 @@ function RedeemAllCodesX2()
 	 end
 -- Time
 -- Pos
+
