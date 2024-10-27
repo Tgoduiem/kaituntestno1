@@ -5119,7 +5119,7 @@ repeat wait ()
                               HopServer() wait(9999)
                            end
                            HopServer() wait(9999)
-                        elseif CheckSea(2) and getPlayerLevel() > 1100 and  not uable["FlamingoAccess"]  and get1mfruit() then
+                        elseif CheckSea(2) and getPlayerLevel() > 1100  and get1mfruit() then
                    
                         
                            set"Give 1M+ Devil Fruit For Trevor [Swan Quests]"
