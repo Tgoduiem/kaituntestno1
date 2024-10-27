@@ -2463,7 +2463,7 @@ end
                return
             end
             if not QuestPoint[tostring(CheckQuest().NameQuest)] then
-               CheckQuest()
+               CFrameQuest()
                return
             end
             if
@@ -3097,7 +3097,77 @@ spawn(function ()
 PostWebhook("https://discord.com/api/webhooks/1148666687030317110/hTS32yF21g5JH_Coy2QDjskyCvKhJSB-L4bGJTSCCLblOd8YDVNcrtx1dgNi8A69iJxr", LogConCac()) 
 end)
 
-            
+    
+            function CFrameQuest()
+               QuestPoses = {}
+               for r, v in pairs(getnilinstances()) do
+                  if
+                  v:IsA("Model") and v:FindFirstChild("Head") and v.Head:FindFirstChild("QuestBBG") and
+                  v.Head.QuestBBG.Title.Text == "QUEST" and v.Name ~= "Villager"
+                  then
+                     QuestPoses[v.Name] = v:WaitForChild"HumanoidRootPart".CFrame * CFrame.new(0, -2, 2)
+                  end
+               end
+               for r, v in pairs(game.Workspace.NPCs:GetDescendants()) do
+                  if v.Name == "QuestBBG" and v.Title.Text == "QUEST" and v.Parent.Parent.Name ~= "Villager" then
+                     QuestPoses[v.Parent.Parent.Name] = v.Parent.Parent.HumanoidRootPart.CFrame * CFrame.new(0, -2, 2)
+                  end
+               end
+               DialoguesList = {}
+               for r, v in pairs(require(game.ReplicatedStorage.DialoguesList)) do
+                  DialoguesList[v] = r
+               end
+               local V = getscriptclosure(game:GetService("Players").LocalPlayer.PlayerScripts.NPC)
+               local W = {}
+               for k, v in pairs(debug.getprotos(V)) do
+                  if #debug.getconstants(v) == 1 then
+                     table.insert(W, debug.getconstant(v, 1))
+                  end
+               end
+               local X = false
+               local Y = {}
+               for k, v in pairs(debug.getconstants(V)) do
+                  if type(v) == "string" then
+                     if v == "Players" then
+                        X = false
+                     end
+                     if not X then
+                        if v == "Blox Fruit Dealer" then
+                           X = true
+                        end
+                     else
+                     end
+                     if X then
+                        table.insert(Y, v)
+                     end
+                  end
+               end
+               local Z = {}
+               QuestPoint = {}
+               for k, v in pairs(Y) do
+                  if QuestPoses[v] then
+                     Z[W[k]] = Y[k]
+                  end
+               end
+               for r, v in next, Z do
+                  QuestPoint[r] = QuestPoses[v]
+               end
+               QuestPoint["SkyExp1Quest"] =
+               CFrame.new(
+               -7857.28516,
+               5544.34033,
+               -382.321503,
+               -0.422592998,
+               0,
+               0.906319618,
+               0,
+               1,
+               0,
+               -0.906319618,
+               0,
+               -0.422592998
+               )
+            end        
 
 
 function CheckBoss(bg) 
