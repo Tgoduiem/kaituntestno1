@@ -2459,38 +2459,28 @@ function getraidchip()
   return "Dark"
 end
          function GetQuest()
-            if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == false then
-				local Lv = game.Players.LocalPlayer.Data.Level.Value
-				if game.Players.LocalPlayer.Data.Level.Value >= 10 and game.Players.LocalPlayer.Data.Level.Value <= 100 then
-					CheckQuest()
-					game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text = NameMon
-					game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible = true
-				else
-					CheckQuest()
-					if not First_Quest then
-						if SelectMonster ~= nil then
-							First_Quest = true
-						end
-					else
-						SelectMonster = nil
-						First_Quest = false
-					end
-					repeat wait(.1)
-						TPX(CFrameQ)
-						if (CFrameQ.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 3 then
-							wait(1)
-							game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StartQuest", NameQuest, QuestLv)
-							game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetSpawnPoint")
-						end
-					until game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true or not Auto_Farm_Kaitun
-				end
-			end
-		elseif game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true then
-			game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")
-		end
-	end
-         
-         end
+            if game.Players.LocalPlayer.PlayerGui.Main:FindFirstChild("Quest").Visible then
+               return
+            end
+            if not QuestPoint[tostring(CheckQuest().NameQuest)] then
+               CheckQuest()
+               return
+            end
+            if
+            (QuestPoint[CheckQuest()).NameQuest].Position -
+            game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 8
+            then 
+              vc = CheckQuest()
+               ad:InvokeServer("StartQuest", tostring(vc.NameQuest), vc.ID)
+               MobDual2 = vc.Name  
+            
+
+            else
+               QuestCFrame = QuestPoint[CheckQuest().NameQuest]
+               to(QuestCFrame) 
+               
+            end
+            
 
          function checkNotify(msg)
            msg = string.lower(msg)
