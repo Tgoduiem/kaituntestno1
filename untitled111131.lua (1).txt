@@ -2462,7 +2462,7 @@ end
             if game.Players.LocalPlayer.PlayerGui.Main:FindFirstChild("Quest").Visible then
                return
             end
-            if not QuestPoint[tostring(CheckQuest().NameQuest)] then
+            if not QuestPoint[tostring(CheckQuest().NameMon)] then
                CFrameQuest()
                return
             end
