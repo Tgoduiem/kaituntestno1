@@ -240,4 +240,29 @@ function CheckDoubleQuest()
             a5["ID"] = Mob3
             return a5
          end
+function GetQuest()
+            if game.Players.LocalPlayer.PlayerGui.Main:FindFirstChild("Quest").Visible then
+               return
+            end
+            if not QuestPoint[tostring(CheckDoubleQuest2().NameQuest)] then
+               CFrameQuest()
+               return
+            end
+            if
+            (QuestPoint[CheckDoubleQuest2().NameQuest].Position -
+            game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 8
+            then 
+              vc = CheckDoubleQuest2()
+               ad:InvokeServer("StartQuest", tostring(vc.NameQuest), vc.ID)
+               MobDual2 = vc.Name  
+            
+
+            else
+               QuestCFrame = QuestPoint[CheckDoubleQuest2().NameQuest]
+               to(QuestCFrame) 
+               
+            end
+            
+         
+         end
          
