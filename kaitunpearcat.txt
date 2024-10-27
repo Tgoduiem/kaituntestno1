@@ -141,142 +141,103 @@ function EquipWeapon(ToolSe)
 	 end
 -- Time
 -- Pos
-function(vu)
-		Teleport_Tween = vu
-		if not vu then
-			if Tween ~= nil then
-				Tween:Cancel()
-			end
-		end
-	end
-function TP(Pos)
-		local xps = game.Players.LocalPlayer and game.Players.LocalPlayer.Character.HumanoidRootPart and  game.Players.LocalPlayer.Character.HumanoidRootPart.Position
-		if xps then
-			local Distance = (Pos.Position - xps).Magnitude
-			pcall(function()
-				Tween = game:GetService("TweenService"):Create(
-					game.Players.LocalPlayer.Character.HumanoidRootPart,
-					TweenInfo.new(Distance/300, Enum.EasingStyle.Linear),
-					{CFrame = Pos}
-				)
-				Tween:Play()
-				if Distance <= 300 then
-					Tween:Cancel()
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Pos
-				end
-			end)
-		end
-	end
-function TPX(RealTarget)
-		pcall(function()
-			local Distance = (RealTarget.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).Magnitude
-			if Distance < 100 then
-				Speed = 1500
-			elseif Distance < 200 then
-				Speed = 1200
-			elseif Distance < 500 then
-				Speed = 515
-			elseif Distance < 1000 then
-				Speed = 315
-			elseif Distance >= 1000 then
-				Speed = 300
-			end
-			if Distance > 3000 and game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
-				if Main and (Vector3.new(61163.8515625, 11.6796875, 1819.7841796875)-RealTarget.Position).Magnitude <= 2000 then
-					game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(61163.8515625, 11.6796875, 1819.7841796875))
-				elseif Main and (Vector3.new(-4607.82275, 872.54248, -1667.55688)-RealTarget.Position).Magnitude <= 2000 then
-					game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-4607.82275, 872.54248, -1667.55688))
-				elseif Main and (Vector3.new(-7894.6176757813, 5547.1416015625, -380.29119873047)-RealTarget.Position).Magnitude <= 2000 then
-					game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-7894.6176757813, 5547.1416015625, -380.29119873047))
-				elseif Dressrosa and (Vector3.new(923.21252441406, 126.9760055542, 32852.83203125)-RealTarget.Position).Magnitude <= 2000 then
-					game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(923.21252441406, 126.9760055542, 32852.83203125))
-				elseif Dressrosa and (Vector3.new(923.21252441406, 126.9760055542, 32852.83203125)-RealTarget.Position).Magnitude <= 2000 then
-					game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(923.21252441406, 126.9760055542, 32852.83203125))
-				elseif Main and (Vector3.new(-7894.6176757813, 5547.1416015625, -380.29119873047)-RealTarget.Position).Magnitude <= 2000 then
-					game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-7894.6176757813, 5547.1416015625, -380.29119873047))
-				elseif Main and (Vector3.new(-2953.31884765625, 41.01357650756836, 2099.16943359375)-RealTarget.Position).Magnitude <= 2300 then
-					if Main and (Vector3.new(61163.8515625, 11.6796875, 1819.7841796875)-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 2000 then
-						game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-4607.82275, 872.54248, -1667.55688))
-					elseif Main and (Vector3.new(-7894.6176757813, 5547.1416015625, -380.29119873047)-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 2000 then
-						game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-4607.82275, 872.54248, -1667.55688))
-					end
-					TP(RealTarget)
-				elseif Main and (Vector3.new(3876.00366, 24.6882591, -3820.21777)-RealTarget.Position).Magnitude <= 1700 then
-					TP(RealTarget)
-				elseif Dressrosa and (Vector3.new(3876.00366, 24.6882591, -3820.21777)-RealTarget.Position).Magnitude <= 3000 then
-					TP(RealTarget)
-				elseif Dressrosa and List.Boss and Select_List_Boss == "Darkbeard" and Start_Kill_Boss then
-					TP(RealTarget)
-				elseif Zou and List.Boss and Select_List_Boss == "Cake Prince" and Start_Kill_Boss then
-					TP(RealTarget)
-				elseif Dressrosa and (Vector3.new(4768.3388671875, 8.318676948547363, 2868.102294921875)-RealTarget.Position).Magnitude <= 1700 then
-					TP(RealTarget)
-				elseif Dressrosa and (Vector3.new(-5219.4585, 58.2147713, 2384.21191)-RealTarget.Position).Magnitude <= 1200 then
-					TP(RealTarget)
-				elseif game.Players.LocalPlayer.Character.Humanoid.Health > 0 then 
-					local xpta = game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character.HumanoidRootPart
-                    if xpta then
-                        game.Players.LocalPlayer.Character.Humanoid:ChangeState(15)
-                        game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(RealTarget)
-                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = RealTarget
-                        task.wait()
-                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = RealTarget
-                        task.wait()
-                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = RealTarget
-                        task.wait()
-                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = RealTarget
-                        wait(7)
-                    end
-				end
-			elseif game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
-				TP(RealTarget)
-			end
-		end)
-	end
-function TPBoat(p,boat,speedx,stop)
-		if stop == nil then
-			stop = false
-		end
-		local Distance = (p.Position - boat.Position).Magnitude
-		Speed = speedx
-		TweenP = game:GetService("TweenService"):Create(boat,TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),{CFrame = p})
-		if stop == true then
-			TweenP:Cancel()
-		else
-			TweenP:Play()
-		end
-	end
-	function TPZ(p)
-		local Distance = (p.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-		if Distance < 100 then
-			Speed = 50
-		elseif Distance < 400 then
-			Speed = 400
-		elseif Distance < 1000 then
-			Speed = 300
-		elseif Distance < 1500 then
-			Speed = 260
-		elseif Distance >= 1500 then
-			Speed = 300
-		end
-		Tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),{CFrame = p})
-		Tween:Play()
-	end
-	function TPZX(p)
-		local Distance = (p.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-		if Distance < 100 then
-			Speed = 20
-		elseif Distance < 400 then
-			Speed = 400
-		elseif Distance < 1000 then
-			Speed = 300
-		elseif Distance < 1500 then
-			Speed = 260
-		elseif Distance >= 1500 then
-			Speed = 300
-		end
-		Tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),{CFrame = p})
-		Tween:Play()
-	end
-end
 -- Fram Player
+--Quest
+function CheckDoubleQuest()
+
+            local a = {}
+            for r, v in pairs(Q) do
+               for M, N in pairs(v) do
+                  local U = N.LevelReq
+                  for O, P in pairs(N.Task) do
+                     if O == Mob1 then
+                        for _, a0 in next, v do
+                           if a0.LevelReq <= game.Players.LocalPlayer.Data.Level.Value and a0.Name ~= "Town Raid" then
+                              for a1, a2 in next, a0.Task do
+                                 if a2 > 1 then
+                                    table.insert(a, a1)
+                                 end
+                              end
+                           end
+                        end
+                     end
+                  end
+               end
+            end
+            return a 
+         end
+         local a3 = require(game.ReplicatedStorage:WaitForChild("GuideModule"))
+         function CheckQuestData()
+            for r, v in next, a3.Data do
+               if r == "QuestData" then
+                  return true
+               end
+            end
+            return false
+         end
+
+         function CheckNameDoubleQuest()
+            local a
+            if CheckQuestData() then
+               for r, v in next, a3.Data.QuestData.Task do
+                  a = r
+               end
+            end
+            return a
+         end
+         function CheckNameDoubleQuest2()
+            local a
+            local a4 = {}
+            if CheckQuestData() then
+               for r, v in next, a3.Data.QuestData.Task do
+                  a = r
+                  table.insert(a4, r)
+               end
+            end
+            return a4
+         end
+
+         function CheckDoubleQuest2()
+            checkq()
+            local a5 = {}
+            if
+            game.Players.LocalPlayer.Data.Level.Value >= 10 and CheckQuestData() and
+            CheckNameDoubleQuest() == Mob1 and
+            #CheckNameDoubleQuest() > 2
+            then
+               for r, v in pairs(Q) do
+                  for M, N in pairs(v) do
+                     for O, P in pairs(N.Task) do
+                        if tostring(O) == Mob1 then
+                           for a6, a7 in next, v do
+                              for a8, a9 in next, a7.Task do
+                                 if a8 ~= Mob1 and a9 > 1 then
+                                    if a7.LevelReq <= game.Players.LocalPlayer.Data.Level.Value then
+                                       a5["Name"] = tostring(a8)
+                                       a5["NameQuest"] = r
+                                       a5["ID"] = a6
+                                    else
+                                       a5["Name"] = Mob1
+                                       a5["NameQuest"] = Mob2
+                                       a5["ID"] = Mob3
+                                    end
+                                    return a5
+                                 end
+                              end
+                           end
+                        end
+                     end
+                  end
+               end
+            else
+               a5["Name"] = Mob1
+               a5["NameQuest"] = Mob2
+               a5["ID"] = Mob3
+               return a5
+            end
+            a5["Name"] = Mob1
+            a5["NameQuest"] = Mob2
+            a5["ID"] = Mob3
+            return a5
+         end
+         
